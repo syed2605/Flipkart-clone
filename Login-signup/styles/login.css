@@ -1,0 +1,80 @@
+.nav
+{
+display:flex ;
+gap: 20px;
+justify-content: end;
+padding-right: 50px;
+height: 30px;
+}
+.nav div
+{
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+h1 {
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 1000;
+}
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  gap: 10px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* height: 450px; */
+}
+#login-form-div {
+  width: 50%;
+  margin: auto;
+  margin-top: 150px;
+}
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+  border-radius: 10px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  caret-color: rgb(232, 0, 113);
+  font-family: sans-serif;
+  padding-left: 12px;
+}
+input[type="submit"] {
+  background-color: #fc2779;
+  border: none;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  font-family: sans-serif;
+}
+body {
+  /* width: 50%;
+    margin: auto; */
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+label {
+  font-size: 18px;
+  /* color: white; */
+  font-family: sans-serif;
+}
