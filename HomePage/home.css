@@ -1,3 +1,11 @@
+body{
+    font-size: 14px;
+    background-color: #f1f3f6;
+    color: #212121;
+    line-height: 1.4;
+    font-family: Roboto,Arial,sans-serif;
+}
+
 .home-top-carousel {
     padding-top: 20px;
     width: 100%;
@@ -9,49 +17,29 @@
  
 
 /****************************
-.bestofElectronic_Contianer{
-    width: 99%;
-    height: 310px;
-    background-color: red;
-}
-.bestofElectronicmoreOption{
-    height: 100px;
-    max-width: 100%;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-}
-.bestofElectronicmoreOption img{
-    height: 100%;
-    width: 100%;
-}
-.BestofElectronic_item{
-    background-color: white;
-    min-width: 210px;
-    max-width:210px ;
-    height: 310px;
-    position: relative;
-    display: flex;
-    /* justify-content: center; */
-   
-    .bestofElectronic_Contianer{
+ */
+ .BeautyFoodToy_Contianer{
+    margin-top: 10px;
+ }
+    .bestofElectronic_Contianer ,.BeautyFoodToy_Contianer{
       width: 99%;
       height: 340px;
       background-color: aqua;
      
   }
-  .bestofElectronicmoreOption{
-      height: 100px;
+  .bestofElectronicmoreOption, .BeautyFoodToymoreOption{
+      height: 130px;
       max-width: 100%;
       position: absolute;
       bottom: 0;
       text-align: center;
+      
   }
-  .bestofElectronicmoreOption img{
+  .bestofElectronicmoreOption img , .BeautyFoodToymoreOption img{
       height: 100%;
       width: 100%;
   }
-  .BestofElectronic_item{
+  .BestofElectronic_item, .BeautyFoodToy_item{
       background-color: white;
       min-width: 210px;
       max-width:210px ;
@@ -69,12 +57,12 @@
       color:white;
       font-size: 15px;
   }
-  .bestofElectronic_bigText{
+  .bestofElectronic_bigText, .BeautyFoodToy_bigText{
       font-size: 30px;
       text-align: center;
       margin:60px 0px 30px 0px;
   }
-  .bestofElectronic_list{
+  .bestofElectronic_list, .BeautyFoodToy_list{
       display: flex;
   }
   .bestOfElectornic_image_Product{
@@ -109,11 +97,10 @@
       color:rgb(193, 189, 189);
       font-size: 14px;
       padding-top: -15px;
-      padding-bottom: 5px;
   }
   
   
-  .bestofElctronic_product_item{
+  .bestofElctronic_product_item, .BeautyFoodToy_product_item{
       display: flex;
      
   }
