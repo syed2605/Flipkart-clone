@@ -1,0 +1,101 @@
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content
+{
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* padding: 20px; */
+    border: 1px solid #888;
+    width: 700px;
+    height: 500px;
+    border-radius: 10px;
+}
+.close{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 95%;
+}
+.close:hover,
+.close:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.row
+{
+    display: flex;
+    outline: none;
+    position: relative;
+    width: 100%;
+    /* margin: auto; */
+    height: 300px;
+}
+.col2-5
+{
+    width: 40%;
+    background-color: #2874f0;
+    padding: 20px;
+    vertical-align: top;
+    height: 460px;
+    background-image: url("https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/login_img_c4a81e.png");
+    background-repeat: no-repeat;
+    position: sticky;
+    background-position: 50% 80%;  
+    color: white;
+    font-family: Roboto,Arial,sans-serif;
+    font-weight: 500;
+    border-radius: 10px 0px 0px 10px;
+    
+}
+.col3-5
+{
+    width: 60%;
+    height: 460px;
+    font-family: Roboto,Arial,sans-serif;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    gap: 10px;
+}
+
+form input[type=text],input[type=password]  
+{
+    border: 0;
+    border-bottom: 1px solid gray;
+    border-collapse: collapse;
+    height: 30px;
+    margin-bottom: 30px;
+
+}
+form input[type=submit]
+{
+border: 0px;
+height: 40px;
+font-weight: 200;
+font-size: 16px;
+background-color: #fb641b;
+color: white;
+border-radius: 3px;
+}
+#legal a{
+    text-decoration: none;
+}
+#legal{
+    font-size: 12px;
+    color: #888;
+}
