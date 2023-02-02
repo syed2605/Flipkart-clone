@@ -1,450 +1,486 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/6c1f5c4092.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/6c1f5c4092.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-      </style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+    </style>
     <style>
-         body{
-            font-family: 'Roboto',Arial, sans-serif;
-            color: #212121;
-        }
-        #product_details{
-            width: 80%;
-            margin: auto;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            /* position: absolute; */
-            display: flex;
-            /* border: 2px solid red; */
-            justify-content: space-between;
-        }
-        #first-div{
-            width: 40%;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            /* border: 2px solid blue; */
-            position: sticky;
-            right: 30%;
-            top: 0;
-            left: 10%;
-            /* bottom: 0; */
-        }
-        #image_section{
-            width: 100%;
-            /* border: 2px solid blue; */
-        }
-        #info_section{
-            width: 40%;
-            height: auto;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            /* border: 2px solid blue; */
-            position: absolute;
-            padding: 10px;
-            /* left: 50%; */
-            right: 10%;
-            /* top: 0;
+      body {
+        font-family: "Roboto", Arial, sans-serif;
+        color: #212121;
+      }
+      #product_details {
+        width: 80%;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        /* position: absolute; */
+        display: flex;
+        /* border: 2px solid red; */
+        justify-content: space-between;
+      }
+      #first-div {
+        width: 40%;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        /* border: 2px solid blue; */
+        position: sticky;
+        right: 30%;
+        top: 0;
+        left: 10%;
+        /* bottom: 0; */
+      }
+      #image_section {
+        width: 100%;
+        /* border: 2px solid blue; */
+      }
+      #info_section {
+        width: 40%;
+        height: auto;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        /* border: 2px solid blue; */
+        position: absolute;
+        padding: 10px;
+        /* left: 50%; */
+        right: 10%;
+        /* top: 0;
             bottom: 0; */
-        }
-        #display_price{
-            display: flex;
-        }
-        #display_price span{
-            font-size:25px;
-            /* font-weight: lighter; */
-            color: #878787;
-            margin-left: 5px;
-            text-decoration: line-through;
-        }
-        #offer li{
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 20px;
-            margin-bottom: 10px;
-            list-style-type: none;
-        }
-        #marking-logo{
-            width:25px;
-            height: 20px;
-            margin-right: 10px;
-        }
-        .cart-img-container {
-            display: flex;
-            /* flex-direction: column; */
-            width: 100%;
-            gap: 0.5rem;
-            /* border: 5px solid red; */
-        }
-        .small-img-container>img{
+      }
+      #display_price {
+        display: flex;
+      }
+      #display_price span {
+        font-size: 25px;
+        /* font-weight: lighter; */
+        color: #878787;
+        margin-left: 5px;
+        text-decoration: line-through;
+      }
+      #offer li {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        margin-bottom: 10px;
+        list-style-type: none;
+      }
+      #marking-logo {
+        width: 25px;
+        height: 20px;
+        margin-right: 10px;
+      }
+      .cart-img-container {
+        display: flex;
+        /* flex-direction: column; */
+        width: 100%;
+        gap: 0.5rem;
+        /* border: 5px solid red; */
+      }
+      .small-img-container > img {
         width: 100%;
         margin-top: 10%;
-        }
-        .small-img-container {
-            display: flex;
-            flex-direction: column;
-            width: 25%;
-            margin-top: 5%;
-            /* gap: 0.5rem; */
-            /* border: 2px solid blue; */
-        }
+      }
+      .small-img-container {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        margin-top: 5%;
+        /* gap: 0.5rem; */
+        /* border: 2px solid blue; */
+      }
 
-        .target-img-container{
-            /* padding: 0.1rem; */
-            /* margin-top: 5%; */
-            width: 70%;
-            height: 100%;
-            display: none;
-            /* display: flex; */
-            /* border: 4px solid green; */
-        }
-        .target-img-container img{
+      .target-img-container {
+        /* padding: 0.1rem; */
+        /* margin-top: 5%; */
+        width: 70%;
+        height: 100%;
+        display: none;
+        /* display: flex; */
+        /* border: 4px solid green; */
+      }
+      .target-img-container img {
         width: 100%;
         margin-top: 10%;
-            /* height: 80%;
+        /* height: 80%;
             border: 4px solid violet; */
-        }
-        #cartButtons{
-            width: 100%;
-            /* border: 2px solid violet; */
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-            
-        }
-        #cartButtons>button{
-            /* padding: 10px 15px; */
-            width: 45%;
-            height: 55px;
-            font-size: large;
-            font-weight: 600;
-            border: none;
-            border-radius: 5px;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        #cartButtons>button:nth-child(1){
-            background:#ff9f00 ;
-        }
-        #cartButtons>button:nth-child(2){
-            background:#fb641b ;
-        }
-        i{
-            margin-right: 10px;
-        }
-        ._3iRXzi{
-                vertical-align: middle;
-            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMHY3LjdoMi4xVjE0TDcgNS42SDQuMkw3IDAiIGZpbGw9IiNGRkYiLz48L3N2Zz4=);
-            background-repeat: no-repeat;
-            width: 16px;
-            height: 16px;
-            }
-        .brand{
-            color: grey;
-            margin-bottom: -10px;
-        }
-        .price_box{
-            display: flex;
-            align-items: center;
-            margin-top: -20px;
-            margin-bottom: -20px;
-            /* flex-direction: column; */
-        }
-       .price_box .st_price{
+      }
+      #cartButtons {
+        width: 100%;
+        /* border: 2px solid violet; */
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      #cartButtons > button {
+        /* padding: 10px 15px; */
+        width: 45%;
+        height: 55px;
+        font-size: large;
+        font-weight: 600;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #cartButtons > button:nth-child(1) {
+        background: #ff9f00;
+      }
+      #cartButtons > button:nth-child(2) {
+        background: #fb641b;
+      }
+      i {
+        margin-right: 10px;
+      }
+      ._3iRXzi {
+        vertical-align: middle;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMHY3LjdoMi4xVjE0TDcgNS42SDQuMkw3IDAiIGZpbGw9IiNGRkYiLz48L3N2Zz4=);
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 16px;
+      }
+      .brand {
+        color: grey;
+        margin-bottom: -10px;
+      }
+      .price_box {
+        display: flex;
+        align-items: center;
+        margin-top: -20px;
+        margin-bottom: -20px;
+        /* flex-direction: column; */
+      }
+      .price_box .st_price {
         text-decoration: line-through;
         font-weight: lighter;
         margin-left: 10px;
         margin-right: 10px;
-       }
-       .discount{
-            color: rgb(33, 197, 33);
-       }
-       #brief_info .logo{
+      }
+      .discount {
+        color: rgb(33, 197, 33);
+      }
+      #brief_info .logo {
         width: 15%;
         height: 20px;
         margin-left: 10px;
-       }
-       .offer{
+      }
+      .offer {
         color: rgb(33, 197, 33);
-       }
-       .TC{
-        color:#2874f0 ;
-       }
-       span{
+      }
+      .TC {
+        color: #2874f0;
+      }
+      span {
         font-weight: bolder;
-       }
-       #pincode_div{
+      }
+      #pincode_div {
         width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            /* border: 2px solid red; */
-       }
-       #pincode_div img{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* border: 2px solid red; */
+      }
+      #pincode_div img {
         width: 30px;
         margin-right: 25px;
-       }
-       #pincode_div h2{
-            margin-left: -10px;
-            color: gray;
-            /* margin-right: 100px; */
-       }
-       #pincodeInput{
+      }
+      #pincode_div h2 {
+        margin-left: -10px;
+        color: gray;
+        /* margin-right: 100px; */
+      }
+      #pincodeInput {
         display: flex;
         align-items: center;
-       }
-       #pincodeInput input{
-            border: #878787;
-       }
-       #pincodeInput>h2{
+      }
+      #pincodeInput input {
+        border: #878787;
+      }
+      #pincodeInput > h2 {
         margin-left: 10px;
         color: #2874f0;
-       }
-       hr{
+      }
+      hr {
         width: 30%;
         margin-left: 0px;
         height: 5px;
         margin-top: -5px;
         background: #2874f0;
         border: #2874f0;
-       }
-       #pincode_div div:first-child{
+      }
+      #pincode_div div:first-child {
         display: flex;
-        width:40%;
+        width: 40%;
         justify-content: left;
         align-items: center;
         /* border: 2px solid #2874f0; */
-       }
-       #pincode_div div:nth-child(2){
+      }
+      #pincode_div div:nth-child(2) {
         display: flex;
-        width:50%;
+        width: 50%;
         justify-content: space-between;
         align-items: center;
         /* border: 2px solid #2874f0; */
-       }
-       #add_delivery_info{
+      }
+      #add_delivery_info {
         margin-top: 30px;
         width: 100%;
         /* border: 2px solid red; */
-       }
-       #pincode_div h3:nth-child(1){
+      }
+      #pincode_div h3:nth-child(1) {
         color: #878787;
         margin-right: 10px;
-       }
-       #pincode_div h3{
+      }
+      #pincode_div h3 {
         margin-right: 15px;
         font-weight: 500;
-       }
-       #super-coin{
+      }
+      #super-coin {
         width: 80%;
         /* height: 200px; */
         /* border: 2px solid #2874f0; */
-       }
-       #super-coin>img{
+      }
+      #super-coin > img {
         width: 100%;
-       }
-       #product-detail{
+      }
+      #product-detail {
         width: 75%;
         margin: auto;
         height: 100px;
-        overflow:hidden;
+        overflow: hidden;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         /* border: 2px solid #2874f0; */
-       }
-       #product-detail>div{
+      }
+      #product-detail > div {
         width: 100%;
-        
-       }
-       #product-detail>div>div{
+      }
+      #product-detail > div > div {
         display: flex;
         justify-content: space-between;
         margin-bottom: -15px;
-       }
-       #product-detail>h1{
+      }
+      #product-detail > h1 {
         margin-left: 25%;
-       }
-       #product-detail>div h3{
-        color: gray;  
+      }
+      #product-detail > div h3 {
+        color: gray;
         margin-left: 20px;
-        font-size: x-large;  
-       }
-       #product-detail>div p{
+        font-size: x-large;
+      }
+      #product-detail > div p {
         width: 40%;
         font-size: larger;
-       }
-       #desc{
+      }
+      #desc {
         font-size: larger;
         padding: 10px;
         text-align: justify;
-       }
-       #count-down{
+      }
+      #count-down {
         display: flex;
         background: #fffeeb;
         margin-top: 30px;
-       }
-       #slider{
+      }
+      #slider {
         width: 80%;
         border: 2px solid red;
         margin: auto;
         display: grid;
-        grid-template-columns: 4,1fr;
-       }
-       #slider>div{
+        grid-template-columns: 4, 1fr;
+      }
+      #slider > div {
         border: 2px solid blue;
-       }
-       #collection{
-           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            position: absolute;
-            top: 100%;
-            margin-top: 50px;
-        }
-        #collection>div{
-            display: flex;
-            flex-direction: column;
-            /* align-items: center; */
-            padding: 10px;
-            justify-content: left;
-           
-        }
-        #pro_detail{
-            width: 100%;
-        }
-        #collection>div:hover{
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            display: block;
-            padding-bottom: 10px;
-            /* font-size: large; */
-        }
-        .img_div{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        #collection .img_div img{
-            width: 80%;
-            height: 400px;
-            
-        }
-        #collection .img_div>img:hover{
-            width: 100%;
-        }
-        .brand{
-            color: grey;
-            margin-bottom: -10px;
-        }
-        .price_box{
-            display: flex;
-            align-items: center;
-            margin-top: -20px;
-            margin-bottom: -20px;
-            /* flex-direction: column; */
-        }
-       .price_box .st_price{
+      }
+      #collection {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        position: absolute;
+        top: 100%;
+        margin-top: 50px;
+      }
+      #collection > div {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        padding: 10px;
+        justify-content: left;
+      }
+      #pro_detail {
+        width: 100%;
+      }
+      #collection > div:hover {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        display: block;
+        padding-bottom: 10px;
+        /* font-size: large; */
+      }
+      .img_div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #collection .img_div img {
+        width: 80%;
+        height: 400px;
+      }
+      #collection .img_div > img:hover {
+        width: 100%;
+      }
+      .brand {
+        color: grey;
+        margin-bottom: -10px;
+      }
+      .price_box {
+        display: flex;
+        align-items: center;
+        margin-top: -20px;
+        margin-bottom: -20px;
+        /* flex-direction: column; */
+      }
+      .price_box .st_price {
         text-decoration: line-through;
         margin-left: 10px;
         margin-right: 10px;
-       }
-       .discount{
-            color: rgb(33, 197, 33);
-       }
-       #collection div .logo{
+      }
+      .discount {
+        color: rgb(33, 197, 33);
+      }
+      #collection div .logo {
         width: 30%;
         height: 20px;
         margin-bottom: 10px;
-       }
-       .delivery{
+      }
+      .delivery {
         display: none;
         color: rgb(33, 197, 33);
-       }
-       /* #get_details{
+      }
+      /* #get_details{
         height: auto;
        } */
     </style>
-</head>
-<body>
-    
+  </head>
+  <body>
     <div id="product_details">
-        <div id="first-div">
-            <div class="cart-img-container">
-                <div class="small-img-container">
-                   <img src="" alt="">
-                   <img src="" alt="">
-                </div>
-                <div class="target-img-container">
-                  <img  src="" alt="">
-                </div>
-             </div>
-             <div id="cartButtons">
-                <button id="addToCart"> <i class="fa-solid fa-cart-shopping"></i>ADD TO CART</button>
-                <button id="byNow"><span class="_3iRXzi"></span>BUY NOW</button>
-                
-            </div>
+      <div id="first-div">
+        <div class="cart-img-container">
+          <div class="small-img-container">
+            <img src="" alt="" />
+            <img src="" alt="" />
+          </div>
+          <div class="target-img-container">
+            <img src="" alt="" />
+          </div>
         </div>
-        <div id="info_section">
-            <div id="count-down">
-                <img src="https://rukminim1.flixcart.com/fk-p-flap/92/92/image/d4cdfaed48b64773.jpg?q=90" alt="">
-                <h2>Big Bachat Dhamaal Sale Starts in <span id="hours">05</span>  hrs : <span id="minutes">1</span> mins : <span id="seconds">60 </span>secs</h2>
+        <div id="cartButtons">
+          <button id="addToCart">
+            <i class="fa-solid fa-cart-shopping"></i>ADD TO CART
+          </button>
+          <button id="byNow"><span class="_3iRXzi"></span>BUY NOW</button>
+        </div>
+      </div>
+      
+      <div id="info_section">
+        <div id="count-down">
+          <img
+            src="https://rukminim1.flixcart.com/fk-p-flap/92/92/image/d4cdfaed48b64773.jpg?q=90"
+            alt=""
+          />
+          <h2>
+            Big Bachat Dhamaal Sale Starts in <span id="hours">05</span> hrs :
+            <span id="minutes">1</span> mins : <span id="seconds">60 </span>secs
+          </h2>
+        </div>
+        <div id="brief_info"></div>
+        <div id="offer">
+          <h3>Available offers</h3>
+          <li>
+            <img
+              src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
+              id="marking-logo"
+            /><span>Bank Offer</span> 10% off on Kotak Bank Credit Cards and
+            Credit EMI Trxns, up to ₹1,000. On orders of ₹5,000 and above
+            <span class="TC">T&C</span>
+          </li>
+          <li>
+            <img
+              src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
+              id="marking-logo"
+            /><span>Bank Offer</span> Flat ₹100 Instant Cashback on Paytm
+            Wallet. Min Order Value ₹1000. Valid once per Paytm account<span
+              class="TC"
+              >T&C</span
+            >
+          </li>
+          <li>
+            <img
+              src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
+              id="marking-logo"
+            /><span>Bank Offer</span> 5% Cashback on Flipkart Axis Bank
+            Card<span class="TC">T&C</span>
+          </li>
+          <li>
+            <img
+              src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
+              id="marking-logo"
+            />
+            Buy this Product and Get Extra ₹500 Off on Two-Wheelers<span
+              class="TC"
+              >T&C</span
+            >
+          </li>
+        </div>
+
+        <div id="get_details">
+          <div id="add_delivery_info">
+            <div id="pincode_div">
+              <div>
+                <img
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZWxsaXBzZSBjeD0iOSIgY3k9IjE0LjQ3OCIgZmlsbD0iI0ZGRTExQiIgcng9IjkiIHJ5PSIzLjUyMiIvPjxwYXRoIGZpbGw9IiMyODc0RjAiIGQ9Ik04LjYwOSA3LjAxYy0xLjA4IDAtMS45NTctLjgyNi0xLjk1Ny0xLjg0NSAwLS40ODkuMjA2LS45NTguNTczLTEuMzA0YTIuMDIgMi4wMiAwIDAgMSAxLjM4NC0uNTRjMS4wOCAwIDEuOTU2LjgyNSAxLjk1NiAxLjg0NCAwIC40OS0uMjA2Ljk1OS0uNTczIDEuMzA1cy0uODY0LjU0LTEuMzgzLjU0ek0zLjEzIDUuMTY1YzAgMy44NzQgNS40NzkgOC45MjIgNS40NzkgOC45MjJzNS40NzgtNS4wNDggNS40NzgtOC45MjJDMTQuMDg3IDIuMzEzIDExLjYzNCAwIDguNjA5IDAgNS41ODMgMCAzLjEzIDIuMzEzIDMuMTMgNS4xNjV6Ii8+PC9nPjwvc3ZnPg=="
+                  alt=""
+                />
+                <h2>Deliver to</h2>
+              </div>
+              <div>
+                <h3>Services</h3>
+                <h3>Cash on Delivery Available</h3>
+              </div>
             </div>
-                <div id="brief_info">
-
-                </div>
-                <div id="offer">
-                    <h3>Available offers</h3>
-                    <li><img src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" id="marking-logo"><span>Bank Offer</span> 10% off on Kotak Bank Credit Cards and Credit EMI Trxns, up to ₹1,000. On orders of ₹5,000 and above <span class="TC">T&C</span></li>
-                    <li><img src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" id="marking-logo"><span>Bank Offer</span> Flat ₹100 Instant Cashback on Paytm Wallet. Min Order Value ₹1000. Valid once per Paytm account<span class="TC">T&C</span></li>
-                    <li><img src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" id="marking-logo"><span>Bank Offer</span> 5% Cashback on Flipkart Axis Bank Card<span class="TC">T&C</span></li>
-                    <li><img src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" id="marking-logo"> Buy this Product and Get Extra ₹500 Off on Two-Wheelers<span class="TC">T&C</span></li>
-                </div>
-
-                <div id="get_details">
-                        <div id="add_delivery_info">
-                            <div id="pincode_div">
-                               <div>
-                                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZWxsaXBzZSBjeD0iOSIgY3k9IjE0LjQ3OCIgZmlsbD0iI0ZGRTExQiIgcng9IjkiIHJ5PSIzLjUyMiIvPjxwYXRoIGZpbGw9IiMyODc0RjAiIGQ9Ik04LjYwOSA3LjAxYy0xLjA4IDAtMS45NTctLjgyNi0xLjk1Ny0xLjg0NSAwLS40ODkuMjA2LS45NTguNTczLTEuMzA0YTIuMDIgMi4wMiAwIDAgMSAxLjM4NC0uNTRjMS4wOCAwIDEuOTU2LjgyNSAxLjk1NiAxLjg0NCAwIC40OS0uMjA2Ljk1OS0uNTczIDEuMzA1cy0uODY0LjU0LTEuMzgzLjU0ek0zLjEzIDUuMTY1YzAgMy44NzQgNS40NzkgOC45MjIgNS40NzkgOC45MjJzNS40NzgtNS4wNDggNS40NzgtOC45MjJDMTQuMDg3IDIuMzEzIDExLjYzNCAwIDguNjA5IDAgNS41ODMgMCAzLjEzIDIuMzEzIDMuMTMgNS4xNjV6Ii8+PC9nPjwvc3ZnPg==" alt="">
-                                <h2>Deliver to</h2>
-                               </div>
-                                <div>
-                                    <h3>Services</h3>
-                                    <h3>Cash on Delivery Available</h3>
-                            </div>
-                            </div>
-                            <div id="pincodeInput">
-                                <input type="numder" id="enter_pin">
-                                <h2>Check</h2>
-                                
-                            </div>
-                            <hr>
-                            <!-- <div id="super-coin">
+            <div id="pincodeInput">
+              <input type="numder" id="enter_pin" />
+              <h2>Check</h2>
+            </div>
+            <hr />
+            <!-- <div id="super-coin">
                                  <p>Schedule delivery at your convenience</p> -->
-                                <img src="https://rukminim1.flixcart.com/lockin/100/100/images/CCO__PP_2019-07-14.png?q=50" alt="">
-                            <!-- </div> --> 
+            <img
+              src="https://rukminim1.flixcart.com/lockin/100/100/images/CCO__PP_2019-07-14.png?q=50"
+              alt=""
+            />
+            <!-- </div> -->
 
-                            <div id="product-detail">
-                                    <h1 id="headline">Product Details</h1>
-                                    <!-- <div><h3>Blouse Piece </h3><p>${ele.BlousePiece}</p></div> -->
-                            </div>
-                        </div>
-                </div>
-
+            <div id="product-detail">
+              <h1 id="headline">Product Details</h1>
+              <!-- <div><h3>Blouse Piece </h3><p>${ele.BlousePiece}</p></div> -->
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
-
-    <div id="collection">
-
-    </div>
-</body>
-<script>
-    let ele = JSON.parse(localStorage.getItem('item'))
+    <div id="collection"></div>
+  </body>
+  <script>
+    let ele = JSON.parse(localStorage.getItem("item"));
     // let imgDiv= document.getElementById('image_section');
     // let image = document.createElement('img');
     // image.src = obj.image;
@@ -452,74 +488,87 @@
     //  console.log(ele)
 
     function showImagesOnCart(el) {
-        let smallImgContainer = document.querySelector(".small-img-container>img:nth-child(1)").setAttribute("src",ele.image);
-        let selectedImgContainer = document.querySelector(".small-img-container>img:nth-child(1)").classList.add("selected-img");
-        document.querySelector(".small-img-container>img:nth-child(2)").setAttribute("src",ele.image1);
-        document.querySelectorAll(".small-img-container img").forEach((el)=>{
-            el.addEventListener("mouseover",function(el){
-                document.querySelectorAll(".small-img-container img").forEach((el)=>{
-                    el.classList.remove("selected-img");
-                    // console.log(document.querySelectorAll(".small-img-container>img"));
-                })
-                el.target.classList.add("selected-img");
-                //  console.log(document.querySelector(".target-img-container>img"));
-                document.querySelector(".target-img-container>img").setAttribute("src",el.target.src)
-            })
-        })
-        // console.log(el.Image_URL);
-        document.querySelector(".target-img-container").style.display='block';
-        document.querySelector(".target-img-container>img").setAttribute("src",ele.image1);
+      let smallImgContainer = document
+        .querySelector(".small-img-container>img:nth-child(1)")
+        .setAttribute("src", ele.image);
+      let selectedImgContainer = document
+        .querySelector(".small-img-container>img:nth-child(1)")
+        .classList.add("selected-img");
+      document
+        .querySelector(".small-img-container>img:nth-child(2)")
+        .setAttribute("src", ele.image1);
+      document.querySelectorAll(".small-img-container img").forEach((el) => {
+        el.addEventListener("mouseover", function (el) {
+          document
+            .querySelectorAll(".small-img-container img")
+            .forEach((el) => {
+              el.classList.remove("selected-img");
+              // console.log(document.querySelectorAll(".small-img-container>img"));
+            });
+          el.target.classList.add("selected-img");
+          //  console.log(document.querySelector(".target-img-container>img"));
+          document
+            .querySelector(".target-img-container>img")
+            .setAttribute("src", el.target.src);
+        });
+      });
+      // console.log(el.Image_URL);
+      document.querySelector(".target-img-container").style.display = "block";
+      document
+        .querySelector(".target-img-container>img")
+        .setAttribute("src", ele.image1);
     }
     showImagesOnCart(ele);
 
-    let div = document.getElementById('brief_info');
+    let div = document.getElementById("brief_info");
 
-   function displayBriefInfo(){
-    // let div2 = document.createElement('div');
-    //         div2.setAttribute('class','pro_detail');
+    function displayBriefInfo() {
+      // let div2 = document.createElement('div');
+      //         div2.setAttribute('class','pro_detail');
 
-           let brand = document.createElement('h2');
-           brand.textContent=ele.brand;
-           brand.setAttribute('class','brand');
+      let brand = document.createElement("h2");
+      brand.textContent = ele.brand;
+      brand.setAttribute("class", "brand");
 
-           let title = document.createElement('h2');
-           title.textContent=ele.title;
-           title.setAttribute('class','title');
+      let title = document.createElement("h2");
+      title.textContent = ele.title;
+      title.setAttribute("class", "title");
 
-           let offer = document.createElement('h2');
-           offer.textContent='Special Price'
-           offer.setAttribute('class','offer');
+      let offer = document.createElement("h2");
+      offer.textContent = "Special Price";
+      offer.setAttribute("class", "offer");
 
-            let div3 = document.createElement('div');
-            div3.setAttribute('class','price_box');
+      let div3 = document.createElement("div");
+      div3.setAttribute("class", "price_box");
 
-            let price = document.createElement('h1');
-           price.textContent=ele.strikedPrice;
-           price.setAttribute('class','price');
+      let price = document.createElement("h1");
+      price.textContent = ele.strikedPrice;
+      price.setAttribute("class", "price");
 
-           let st_price = document.createElement('h2');
-           st_price.textContent=ele.price;
-           st_price.setAttribute('class','st_price');
+      let st_price = document.createElement("h2");
+      st_price.textContent = ele.price;
+      st_price.setAttribute("class", "st_price");
 
-           let discount = document.createElement('h2');
-           discount.textContent=ele.discount;
-           discount.setAttribute('class','discount');
+      let discount = document.createElement("h2");
+      discount.textContent = ele.discount;
+      discount.setAttribute("class", "discount");
 
-           let img2 = document.createElement('img');
-            img2.src = "https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png";
-            img2.setAttribute('class','logo');
+      let img2 = document.createElement("img");
+      img2.src =
+        "https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png";
+      img2.setAttribute("class", "logo");
 
-           div3.append(price,st_price,discount,img2);
+      div3.append(price, st_price, discount, img2);
 
-           div.append(brand,title,offer,div3);
+      div.append(brand, title, offer, div3);
     }
     displayBriefInfo();
 
-    let details = document.getElementById('product-detail')
+    let details = document.getElementById("product-detail");
     console.log(details);
-    function productDetails(){
-        let div = document.createElement('div');
-        div.innerHTML+=`<div><h3>Style Code</h3><p>${ele.StyleCode}</p></div>
+    function productDetails() {
+      let div = document.createElement("div");
+      div.innerHTML += `<div><h3>Style Code</h3><p>${ele.StyleCode}</p></div>
         <div><h3>Pattern</h3><p>${ele.Pattern}</p></div>
         <div><h3>Pack of</h3><p>${ele.Packof}</p></div>
         <div><h3>Occasion</h3><p>${ele.Occasion}</p></div>
@@ -528,209 +577,199 @@
         <div><h3>Blouse Piece </h3><p>${ele.BlousePiece}</p></div>
         <div><h3>Color</h3><p>${ele.color}</p></div>
         
-        `
-        let desc = document.createElement('p');
-        desc.id="desc";
-        desc.textContent="This is our most beautiful saree for the most beautiful women. Wearing saree is a time consuming process, so here we are presenting ready pleated saree for you. Save you time with our ready pleated saree and enjoy our classical- contemporary twist. It is no longer subjected to wear as a traditional occasion but also for evenings for both millennials and older generations. Wander like a gypsy soul in this enchanting saree with solid and soft - smooth material that will let you breathe in your garden of glam. Get a minimal yet gorgeous look with these flowy drapes, elegantly dropping from the waist to make you all time perfect";
-        
-        details.append(div,desc);
-        return details;
+        `;
+      let desc = document.createElement("p");
+      desc.id = "desc";
+      desc.textContent =
+        "This is our most beautiful saree for the most beautiful women. Wearing saree is a time consuming process, so here we are presenting ready pleated saree for you. Save you time with our ready pleated saree and enjoy our classical- contemporary twist. It is no longer subjected to wear as a traditional occasion but also for evenings for both millennials and older generations. Wander like a gypsy soul in this enchanting saree with solid and soft - smooth material that will let you breathe in your garden of glam. Get a minimal yet gorgeous look with these flowy drapes, elegantly dropping from the waist to make you all time perfect";
+
+      details.append(div, desc);
+      return details;
     }
     productDetails();
-    
-    
-    let headline = document.getElementById('product-detail');
-    headline.addEventListener('click',function(){
-        if(headline.style.height='200px'){
-            headline.style.overflow='visible'
-            headline.style.height='auto'
+
+    let headline = document.getElementById("product-detail");
+    headline.addEventListener("click", function () {
+      if ((headline.style.height = "200px")) {
+        headline.style.overflow = "visible";
+        headline.style.height = "auto";
+      } else {
+        headline.style.overflow = "none";
+        headline.style.height = "200px";
+      }
+    });
+
+    let addToCart = document.getElementById("addToCart");
+    addToCart.addEventListener("click", function () {
+      localStorage.setItem("cartArray", JSON.stringify(ele));
+      location.href = "./cartPage.html";
+    });
+
+    function countDown() {
+      let hour = document.getElementById("hours").textContent;
+      let minute = document.getElementById("minutes").textContent;
+      let second = document.getElementById("seconds").textContent;
+
+      // console.log(hour, typeof(minute), typeof(second));
+
+      let id = setInterval(function () {
+        if (second == 0) {
+          second = 60;
+          minutes = Number(document.getElementById("minutes").textContent);
+          minutes--;
+          document.getElementById("minutes").textContent = null;
+          document.getElementById("minutes").textContent = minutes;
         }
-        else{
-            headline.style.overflow='none'
-            headline.style.height='200px'
+        if (Number(document.getElementById("minutes").textContent == 0)) {
+          document.getElementById("minutes").textContent = 60;
+          hours = Number(document.getElementById("hours").textContent);
+          hours--;
+          document.getElementById("hours").textContent = null;
+          document.getElementById("hours").textContent = hours;
         }
-        
-    })
-
-
-    let addToCart= document.getElementById('addToCart');
-    addToCart.addEventListener('click', function(){
-        localStorage.setItem('cartArray', JSON.stringify(ele));
-        location.href ='./cartPage.html';
-    })
-
-
-    function countDown(){
-        let hour = document.getElementById('hours').textContent;
-        let minute = document.getElementById('minutes').textContent;
-        let second = document.getElementById('seconds').textContent;
-
-        // console.log(hour, typeof(minute), typeof(second));
-
-        let id = setInterval(function(){
-            if(second == 0){
-                second=60;
-                minutes = Number(document.getElementById('minutes').textContent);
-                minutes--;
-                document.getElementById('minutes').textContent=null;
-                document.getElementById('minutes').textContent=minutes;
-            }
-            if(Number(document.getElementById('minutes').textContent==0)){
-                document.getElementById('minutes').textContent=60;
-                hours = Number(document.getElementById('hours').textContent);
-                hours--;
-                document.getElementById('hours').textContent=null;
-                document.getElementById('hours').textContent=hours;
-            }
-            document.getElementById('seconds').textContent=null;
-            document.getElementById('seconds').textContent=second;
-            second--;
-        },1000)
-        
+        document.getElementById("seconds").textContent = null;
+        document.getElementById("seconds").textContent = second;
+        second--;
+      }, 1000);
     }
     countDown();
 
-    async function fetchData(){
-        let res = await fetch('../json/sarees1.json');
-        let data = await res.json();
-        // console.log(data);
-        displaySlider(data);
+    async function fetchData() {
+      let res = await fetch("../json/sarees1.json");
+      let data = await res.json();
+      // console.log(data);
+      displaySlider(data);
     }
     fetchData();
 
-let slider = document.getElementById('collection');
+    let slider = document.getElementById("collection");
 
-    function displaySlider(data){
+    function displaySlider(data) {
+      slider.innerHTML = null;
+      data.forEach((ele, ind) => {
+        if (ind < 4) {
+          let div = document.createElement("div");
+          div.setAttribute("class", "card");
 
-        slider.innerHTML= null;
-        data.forEach((ele,ind) => {
-            if(ind<4){
-            
-            let div = document.createElement('div');
-            div.setAttribute('class','card');
+          let div1 = document.createElement("div");
+          div1.setAttribute("class", "img_div");
 
-            let div1 = document.createElement('div');
-            div1.setAttribute('class','img_div');
+          let img1 = document.createElement("img");
+          img1.src = ele.image;
+          img1.setAttribute("class", "image");
 
-            let img1 = document.createElement('img');
-            img1.src = ele.image;
-            img1.setAttribute('class','image');
+          let imageArray = [];
+          imageArray.push(ele.image);
+          imageArray.push(ele.image1);
 
-            let imageArray=[];
-            imageArray.push(ele.image);
-            imageArray.push(ele.image1)
-            
-           
-            img1.addEventListener('mouseover', function(){
-                // console.log(ele);
-                var i=0;
-                let id = setInterval(function(){
-                    if(i==imageArray.length){
-                        i=0;
-                    }
-                    div1.innerHTML = null;
+          img1.addEventListener("mouseover", function () {
+            // console.log(ele);
+            var i = 0;
+            let id = setInterval(function () {
+              if (i == imageArray.length) {
+                i = 0;
+              }
+              div1.innerHTML = null;
 
-                    let img = document.createElement('img');
-                    img.src = imageArray[i];
+              let img = document.createElement("img");
+              img.src = imageArray[i];
 
-                    div1.append(img);
-                        i++;
-                }, 1500)
+              div1.append(img);
+              i++;
+            }, 1500);
 
-                img1.addEventListener('mouseout', function(){
-                console.log(id);
-                clearInterval(id);
-                })
-            })
-            
-               
-            img1.addEventListener('click', function(){
-                localStorage.setItem('item',JSON.stringify(ele));
-                location.href = './productDetails.html'
-                console.log(ele);
-            })
+            img1.addEventListener("mouseout", function () {
+              console.log(id);
+              clearInterval(id);
+            });
+          });
 
-            div1.append(img1);
+          img1.addEventListener("click", function () {
+            localStorage.setItem("item", JSON.stringify(ele));
+            location.href = "./productDetails.html";
+            console.log(ele);
+          });
 
-            let div2 = document.createElement('div');
-            div2.setAttribute('class','pro_detail');
+          div1.append(img1);
 
-           let brand = document.createElement('h3');
-           brand.textContent=ele.brand;
-           brand.setAttribute('class','brand');
+          let div2 = document.createElement("div");
+          div2.setAttribute("class", "pro_detail");
 
-           let title = document.createElement('h3');
-           title.textContent=ele.title;
-           title.setAttribute('class','title');
+          let brand = document.createElement("h3");
+          brand.textContent = ele.brand;
+          brand.setAttribute("class", "brand");
 
-           let img2 = document.createElement('img');
-            img2.src = "https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png";
-            img2.setAttribute('class','logo');
+          let title = document.createElement("h3");
+          title.textContent = ele.title;
+          title.setAttribute("class", "title");
 
-            let div3 = document.createElement('div');
-            div3.setAttribute('class','price_box');
+          let img2 = document.createElement("img");
+          img2.src =
+            "https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png";
+          img2.setAttribute("class", "logo");
 
-            let price = document.createElement('h2');
-           price.textContent="₹ "+ele.strickedPrice;
-           price.setAttribute('class','price');
+          let div3 = document.createElement("div");
+          div3.setAttribute("class", "price_box");
 
-           let st_price = document.createElement('p');
-           st_price.textContent="₹ "+ele.price;
-           st_price.setAttribute('class','st_price');
+          let price = document.createElement("h2");
+          price.textContent = "₹ " + ele.strickedPrice;
+          price.setAttribute("class", "price");
 
-           let discount = document.createElement('h2');
-           discount.textContent=ele.discount;
-           discount.setAttribute('class','discount');
+          let st_price = document.createElement("p");
+          st_price.textContent = "₹ " + ele.price;
+          st_price.setAttribute("class", "st_price");
 
-           div3.append(price,st_price,discount);
+          let discount = document.createElement("h2");
+          discount.textContent = ele.discount;
+          discount.setAttribute("class", "discount");
 
-           let delivery = document.createElement('h2');
-           delivery.textContent='Free Delivery';
-           delivery.setAttribute('class','delivery');
+          div3.append(price, st_price, discount);
 
-           div2.append(brand,title,img2,div3)
+          let delivery = document.createElement("h2");
+          delivery.textContent = "Free Delivery";
+          delivery.setAttribute("class", "delivery");
 
-           div.append(div1,div2,delivery);
-           slider.append(div);
+          div2.append(brand, title, img2, div3);
 
+          div.append(div1, div2, delivery);
+          slider.append(div);
         }
-        })   
+      });
     }
 
-let product_details= document.getElementById('product_details');
-console.log(product_details);
+    let product_details = document.getElementById("product_details");
+    console.log(product_details);
 
-// function myFunction() {
-//     let first_div = document.getElementById('first-div');
-//     let info_section = document.getElementById('info_section');
-//   var w = window.outerWidth;
-//   var h = window.outerHeight;
-//   var txt = "Window size: width=" + w + ", height=" + h;
-//   document.getElementById("product_details").append(first_div,info_section)
-// }
-// myFunction();
-//     window.addEventListener("scroll", function () {
-//   // console.log(this.window.scroll);
-//   var top = window.pageYOffset || document.documentElement.scrollTop,
-//     left = window.pageXOffset || document.documentElement.scrollLeft;
-//   // console.log("top", top);
-//   // console.log("left", left);
-//   let div = document.getElementsByClassName("product_details")[0];
-//   let ele = div.getBoundingClientRect();
-//   let cTop = ele.top;
-//   let oTop = ele.top + this.window.pageYOffset;
-//   // console.log("ctop", cTop);
-//   // console.log("otop", oTop);
-//   if (cTop < 100) {
-//     div.style.top = "0";
-//     div.style.paddingTop = "120px";
-//   }
-//   if (top < 428) {
-//     div.style.top = "initial";
-//     div.style.marginTop = "initial";
-//     div.style.paddingTop = "initial";
-//   }
-// });
-
-</script>
+    // function myFunction() {
+    //     let first_div = document.getElementById('first-div');
+    //     let info_section = document.getElementById('info_section');
+    //   var w = window.outerWidth;
+    //   var h = window.outerHeight;
+    //   var txt = "Window size: width=" + w + ", height=" + h;
+    //   document.getElementById("product_details").append(first_div,info_section)
+    // }
+    // myFunction();
+    //     window.addEventListener("scroll", function () {
+    //   // console.log(this.window.scroll);
+    //   var top = window.pageYOffset || document.documentElement.scrollTop,
+    //     left = window.pageXOffset || document.documentElement.scrollLeft;
+    //   // console.log("top", top);
+    //   // console.log("left", left);
+    //   let div = document.getElementsByClassName("product_details")[0];
+    //   let ele = div.getBoundingClientRect();
+    //   let cTop = ele.top;
+    //   let oTop = ele.top + this.window.pageYOffset;
+    //   // console.log("ctop", cTop);
+    //   // console.log("otop", oTop);
+    //   if (cTop < 100) {
+    //     div.style.top = "0";
+    //     div.style.paddingTop = "120px";
+    //   }
+    //   if (top < 428) {
+    //     div.style.top = "initial";
+    //     div.style.marginTop = "initial";
+    //     div.style.paddingTop = "initial";
+    //   }
+    // });
+  </script>
 </html>
