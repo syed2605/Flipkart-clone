@@ -244,7 +244,7 @@ let container = document.querySelector('#collection')
             let imageArray=[];
             imageArray.push(ele.image);
             imageArray.push(ele.image1)
-            
+            let id;
             // img1.onmouseover = function(){
             //     setInterval(slider,500);
             // }
@@ -270,7 +270,7 @@ let container = document.querySelector('#collection')
             img1.addEventListener('mouseover', function(){
                 // console.log(ele);
                 var i=0;
-                let id = setInterval(function(){
+                 id = setInterval(function(){
                     if(i==imageArray.length){
                         i=0;
                     }
@@ -281,14 +281,15 @@ let container = document.querySelector('#collection')
 
                     div1.append(img);
                         i++;
+                        // console.log(id);
                 }, 1500)
 
-                img1.addEventListener('mouseout', function(){
-                console.log(id);
-                clearInterval(id);
-                })
+               
             })
-            
+            img1.addEventListener('mouseout', function(){
+                    console.log(id);
+                    clearInterval(id);
+                })
                
             img1.addEventListener('click', function(){
                 localStorage.setItem('item',JSON.stringify(ele));
@@ -382,7 +383,7 @@ let container = document.querySelector('#collection')
 
     let girlsWear = document.getElementById('girlsWear');
     girlsWear.addEventListener('click',function(){
-        location.href='/kidsSection/girls.html'
+        location.href='../kidsSection/girls.html'
     })
     
 </script>
