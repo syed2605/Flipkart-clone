@@ -165,7 +165,7 @@
     <div id="outer">
         <div id="section">
             <div id="disc_img">
-                <img src="https://rukminim1.flixcart.com/image/612/612/jx6fiq80/kids-dress/r/g/j/6-7-years-dezine-red-net-frock-kaarigari-original-imafhzfjxafffkys.jpeg?q=70" alt="" id="girlsWear">
+                <img src="https://rukminim1.flixcart.com/image/832/832/ksyz8280/shrug/y/h/q/2-3-years-1-agswergfv36060-allen-solly-original-imag6f9vzzx6qejf.jpeg?q=70" alt="">
                 <hr id="separator">
                 <div>
                     <h3>Upto 70% Off</h3>
@@ -217,7 +217,7 @@
 
 let duplicate =[];
     async function fetchData(){
-        let res = await fetch('../json/sarees1.json');
+        let res = await fetch('./Kids.json');
 
 
         let data = await res.json();
@@ -292,7 +292,7 @@ let container = document.querySelector('#collection')
                
             img1.addEventListener('click', function(){
                 localStorage.setItem('item',JSON.stringify(ele));
-                location.href = './productDetails.html'
+                location.href = '../Flipkart-clone/WomensPage/productDetails.html'
                 console.log(ele);
             })
 
@@ -380,10 +380,6 @@ let container = document.querySelector('#collection')
         console.log(sorted);
     })
 
-    let girlsWear = document.getElementById('girlsWear');
-    girlsWear.addEventListener('click',function(){
-        location.href='/kidsSection/girls.html'
-    })
     
 </script>
 </html>
