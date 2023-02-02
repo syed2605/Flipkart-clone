@@ -18,16 +18,34 @@ body{
 
 /****************************
  */
- .BeautyFoodToy_Contianer{
+ .BeautyFoodToy_Contianer, .foryourvalentine_Contianer,
+ .MothlyEssentials_Contianer, .SportsHealthcare_Contianer,
+ .HomeKitchenEssentials_Contianer, .GroomingBooksAuto_Contianer,
+ .FashionTopDeals_Contianer, .TopDeals_Contianer,
+ .BooksToys_Contianer, .PickYourStyles_Contianer,
+ .DealOnTVAppliances_Contianer, .BeautyFoodMore_Contianer,
+ .FashionBestSellers_Contianer, .FurnitureBestseller_Contianer{
     margin-top: 10px;
  }
-    .bestofElectronic_Contianer ,.BeautyFoodToy_Contianer{
+    .bestofElectronic_Contianer , .BeautyFoodToy_Contianer, .foryourvalentine_Contianer,
+    .MothlyEssentials_Contianer, .SportsHealthcare_Contianer,
+    .HomeKitchenEssentials_Contianer, .GroomingBooksAuto_Contianer,
+    .FashionTopDeals_Contianer, .TopDeals_Contianer,
+    .BooksToys_Contianer, .PickYourStyles_Contianer,
+    .DealOnTVAppliances_Contianer, .BeautyFoodMore_Contianer,
+    .FashionBestSellers_Contianer, .FurnitureBestseller_Contianer {
       width: 99%;
       height: 340px;
       background-color: aqua;
      
   }
-  .bestofElectronicmoreOption, .BeautyFoodToymoreOption{
+  .bestofElectronicmoreOption, .BeautyFoodToymoreOption ,
+  .foryourvalentinemoreOption , .MothlyEssentialsmoreOption,
+  .SportsHealthcaremoreOption, .HomeKitchenEssentialsmoreOption,
+  .GroomingBooksAutomoreOption, .FashionTopDealsmoreOption,
+  .TopDealsmoreOption, .BooksToysmoreOption,
+  .PickYourStylesmoreOption, .DealOnTVAppliancesmoreOption,
+  .BeautyFoodMoremoreOption, .FashionBestSellersmoreOption, .FurnitureBestsellermoreOption{
       height: 130px;
       max-width: 100%;
       position: absolute;
@@ -35,11 +53,23 @@ body{
       text-align: center;
       
   }
-  .bestofElectronicmoreOption img , .BeautyFoodToymoreOption img{
+  .bestofElectronicmoreOption img , .BeautyFoodToymoreOption img,
+  .foryourvalentinemoreOption img, .MothlyEssentialsmoreOption img,
+  .SportsHealthcaremoreOption img, .HomeKitchenEssentialsmoreOption img,
+  .GroomingBooksAutomoreOption img, .FashionTopDealsmoreOption img,
+  .TopDealsmoreOption img, .BooksToysmoreOption img,
+  .PickYourStylesmoreOption img, .DealOnTVAppliancesmoreOption img,
+  .BeautyFoodMoremoreOption img, .FashionBestSellersmoreOption img, .FurnitureBestsellermoreOption img{
       height: 100%;
       width: 100%;
   }
-  .BestofElectronic_item, .BeautyFoodToy_item{
+  .BestofElectronic_item, .BeautyFoodToy_item,
+  .foryourvalentine_item, .MothlyEssentials_item,
+  .SportsHealthcare_item, .HomeKitchenEssentials_item,
+  .GroomingBooksAuto_item, .FashionTopDeals_item,
+  .TopDeals_item, .BooksToys_item,
+  .PickYourStyles_item, .DealOnTVAppliances_item, 
+  .BeautyFoodMore_item, .FashionBestSellers_item, .FurnitureBestseller_item{
       background-color: white;
       min-width: 210px;
       max-width:210px ;
@@ -57,12 +87,24 @@ body{
       color:white;
       font-size: 15px;
   }
-  .bestofElectronic_bigText, .BeautyFoodToy_bigText{
+  .bestofElectronic_bigText, .BeautyFoodToy_bigText,
+  .foryourvalentine_bigText, .MothlyEssentials_bigText,
+  .SportsHealthcare_bigText, .HomeKitchenEssentials_bigText,
+  .GroomingBooksAuto_bigText, .FashionTopDeals_bigText,
+  .TopDeals_bigText, .BooksToys_bigText,
+  .PickYourStyles_bigText, .DealOnTVAppliances_bigText,
+  .BeautyFoodMore_bigText, .FashionBestSellers_bigText, .FurnitureBestseller_bigText{
       font-size: 30px;
       text-align: center;
       margin:60px 0px 30px 0px;
   }
-  .bestofElectronic_list, .BeautyFoodToy_list{
+  .bestofElectronic_list, .BeautyFoodToy_list,
+  .foryourvalentine_list, .MothlyEssentials_list,
+  .SportsHealthcare_list, .HomeKitchenEssentials_list,
+  .GroomingBooksAuto_list, .FashionTopDeals_list,
+  .TopDeals_list, .BooksToys_list, 
+  .PickYourStyles_list, .DealOnTVAppliances_list,
+  .BeautyFoodMore_list, .FashionBestSellers_list, .FurnitureBestseller_list{
       display: flex;
   }
   .bestOfElectornic_image_Product{
@@ -100,7 +142,13 @@ body{
   }
   
   
-  .bestofElctronic_product_item, .BeautyFoodToy_product_item{
+  .bestofElctronic_product_item, .BeautyFoodToy_product_item,
+  .foryourvalentine_product_item, .MothlyEssentials_product_item,
+  .SportsHealthcare_product_item, .HomeKitchenEssentials_product_item,
+  .GroomingBooksAuto_product_item, .FashionTopDeals_product_item,
+  .TopDeals_product_item, .BooksToys_product_item,
+  .PickYourStyles_product_item, .DealOnTVAppliances_product_item,
+  .BeautyFoodMore_product_item, .FashionBestSellers_product_item, .FurnitureBestseller_product_item{
       display: flex;
      
   }
@@ -136,7 +184,12 @@ body{
     margin: auto;
     top: -55px;
   }
-  #card-btn-right{
+  #card-btn-right , #card-btn-right2,
+  #card-btn-right3, #card-btn-right4,
+  #card-btn-right5, #card-btn-right6, #card-btn-right7,
+  #card-btn-right8, #card-btn-right9,
+  #card-btn-right10, #card-btn-right11, #card-btn-right12,
+  #card-btn-right13 ,#card-btn-right14, #card-btn-right15{
      margin-left: -40px; 
      
     } 
