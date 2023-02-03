@@ -325,7 +325,7 @@ body{
 .BooksToys_Contianer, .PickYourStyles_Contianer,
 .DealOnTVAppliances_Contianer, .BeautyFoodMore_Contianer,
 .FashionBestSellers_Contianer, .FurnitureBestseller_Contianer{
-  margin-top: 10px;
+  margin-top: 20px;
 }
   .bestofElectronic_Contianer , .BeautyFoodToy_Contianer, .foryourvalentine_Contianer,
   .MothlyEssentials_Contianer, .SportsHealthcare_Contianer,
@@ -568,4 +568,19 @@ border-top:1px solid #3f4859;
 display: flex;
 align-items: center;
 gap: 10px;
+}
+
+
+
+/* new blue div box */
+.new-blue-box>div{
+  width: 100%;
+  display: grid;
+ grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.new-blue-box>div>a>img{
+
+  width: 100%;
+  
 }
