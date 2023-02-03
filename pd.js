@@ -2,13 +2,13 @@ let ele = JSON.parse(localStorage.getItem("item"));
     function showImagesOnCart(el) {
       let smallImgContainer = document
         .querySelector(".small-img-container div:nth-child(1)>img")
-        .setAttribute("src", ele.image);
+        .setAttribute("src", ele.image1);
       let selectedImgContainer = document
         .querySelector(".small-img-container div:nth-child(1)>img")
         .classList.add("selected-img");
       document
         .querySelector(".small-img-container div:nth-child(2)>img")
-        .setAttribute("src", ele.image1);
+        .setAttribute("src", ele.image);
       document.querySelectorAll(".small-img-container div img").forEach((el) => {
         el.addEventListener("mouseover", function (el) {
           document
@@ -28,7 +28,7 @@ let ele = JSON.parse(localStorage.getItem("item"));
       document.querySelector(".target-img-container").style.display = "block";
       document
         .querySelector(".target-img-container>img")
-        .setAttribute("src", ele.image1);
+        .setAttribute("src", ele.image);
     }
     showImagesOnCart(ele);
 
@@ -55,7 +55,7 @@ function displayBriefInfo() {
   div3.setAttribute("class", "price_box");
 
   let price = document.createElement("p");
-  price.textContent = "₹"+ele.strikedPrice;
+  price.textContent = "₹"+ele.strickedPrice;
   price.setAttribute("class", "price");
 
   let st_price = document.createElement("p");
@@ -116,18 +116,7 @@ function productDetails() {
   details.append(div, desc);
   return details;
 }
-// productDetails();
 
-// let headline = document.getElementById("product-detail");
-//     headline.addEventListener("click", function () {
-//       if ((headline.style.height = "200px")) {
-//         headline.style.overflow = "visible";
-//         headline.style.height = "auto";
-//       } else {
-//         headline.style.overflow = "none";
-//         headline.style.height = "200px";
-//       }
-//     });
 
     let addToCart = document.getElementById("addToCart");
     addToCart.addEventListener("click", function () {
@@ -216,7 +205,7 @@ function productDetails() {
 
           img1.addEventListener("click", function () {
             localStorage.setItem("item", JSON.stringify(ele));
-            location.href = "./productDetails.html";
+            location.href = "./pd.html";
             console.log(ele);
           });
 
@@ -249,7 +238,7 @@ function productDetails() {
         //   console.log(ele);
         //   console.log(ele.strickedPrice);
           let price = document.createElement("p");
-          price.textContent = "₹" + ele.strikedPrice;
+          price.textContent = "₹" + ele.strickedPrice;
           price.setAttribute("class", "price1");
 
           let st_price = document.createElement("p");

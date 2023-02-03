@@ -1,6 +1,6 @@
 let duplicate =[];
     async function fetchData(){
-        let res = await fetch('/Flipkart-clone/json/Kids.json');
+        let res = await fetch('../json/Kids.json');
 
 
         let data = await res.json();
@@ -53,7 +53,7 @@ let container = document.querySelector('#collection')
                
             img1.addEventListener('click', function(){
                 localStorage.setItem('item',JSON.stringify(ele));
-                location.href = '/Flipkart-clone/girlsProductDetails.html'
+                location.href = '../pd.html'
                 console.log(ele);
             })
 

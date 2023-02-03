@@ -52,7 +52,7 @@ let container = document.querySelector('#collection')
                
             img1.addEventListener('click', function(){
                 localStorage.setItem('item',JSON.stringify(ele));
-                location.href = './productDetails.html'
+                location.href = '../pd.html'
                 console.log(ele);
             })
 
@@ -129,10 +129,7 @@ let container = document.querySelector('#collection')
         console.log(sorted);
     })
 
-    let girlsWear = document.getElementById('girlsWear');
-    girlsWear.addEventListener('click',function(){
-        location.href='../kidsSection/girls.html'
-    })
+    
     
 
     let brand_filter = document.getElementsByClassName('brand-filter');
@@ -181,7 +178,7 @@ let container = document.querySelector('#collection')
                        
                     img1.addEventListener('click', function(){
                         localStorage.setItem('item',JSON.stringify(ele));
-                        location.href = '/Flipkart-clone/girlsProductDetails.html'
+                        location.href = '../pd.html'
                         console.log(ele);
                     })
         

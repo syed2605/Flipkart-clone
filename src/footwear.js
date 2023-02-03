@@ -75,7 +75,7 @@ let container = document.querySelector('#collection')
                
             img1.addEventListener('click', function(){
                 localStorage.setItem('item',JSON.stringify(ele));
-                location.href = '/Flipkart-clone/footwearDeatil.html'
+                location.href = '../pd.html'
                 console.log(ele);
             })
 

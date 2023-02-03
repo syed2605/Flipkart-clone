@@ -1,6 +1,6 @@
 let duplicate = [];
 async function fetchData() {
-  let res = await fetch("/Flipkart-clone/json/Ethnics.json");
+  let res = await fetch("../json/Ethnics.json");
 
   let data = await res.json();
   duplicate = [...data];
@@ -27,28 +27,6 @@ function displayData(data) {
     imageArray.push(ele.image);
     imageArray.push(ele.image1);
 
-    // img1.onmouseover = function(){
-    //     setInterval(slider,500);
-    // }
-    // img1.onmouseout = function(){
-    //     clearInterval(slider);
-    // }
-
-    // var slider = function(){
-    //     var i=0;
-    //     let id = setInterval(function(){
-    //         if(i==imageArray.length){
-    //             i=0;
-    //         }
-    //         div1.innerHTML = null;
-
-    //         let img = document.createElement('img');
-    //         img.src = imageArray[i];
-
-    //         div1.append(img);
-    //             i++;
-    //     }, 1500)
-    // }
     img1.addEventListener("mouseover", function () {
       // console.log(ele);
       var i = 0;
@@ -73,7 +51,7 @@ function displayData(data) {
 
     img1.addEventListener("click", function () {
       localStorage.setItem("item", JSON.stringify(ele));
-      location.href = "/Flipkart-clone/ethicDetails.html";
+      location.href = "../pd.html";
       console.log(ele);
     });
 
@@ -99,7 +77,7 @@ function displayData(data) {
     div3.setAttribute("class", "price_box");
 
     let price = document.createElement("h2");
-    price.textContent = "₹ " + ele.strikedPrice;
+    price.textContent = "₹ " + ele.strickedPrice;
     price.setAttribute("class", "price");
 
     let st_price = document.createElement("p");
@@ -128,7 +106,7 @@ let ascending = document.getElementById("LtH");
 
 ascending.addEventListener("click", function () {
   let sorted = duplicate.sort(function (a, b) {
-    return a.strikedPrice - b.strikedPrice;
+    return a.strickedPrice - b.strickedPrice;
   });
   displayData(sorted);
   console.log(sorted);
@@ -138,7 +116,7 @@ let descending = document.getElementById("HtL");
 
 descending.addEventListener("click", function () {
   let sorted = duplicate.sort(function (a, b) {
-    return b.strikedPrice - a.strikedPrice;
+    return b.strickedPrice - a.strickedPrice;
   });
   displayData(sorted);
   console.log(sorted);
@@ -191,7 +169,7 @@ for(let i=0; i<brand_filter.length; i++){
                    
                 img1.addEventListener('click', function(){
                     localStorage.setItem('item',JSON.stringify(ele));
-                    location.href = '/Flipkart-clone/girlsProductDetails.html'
+                    location.href = "../pd.html";
                     console.log(ele);
                 })
     

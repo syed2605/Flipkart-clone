@@ -29,6 +29,8 @@ body {
     padding-top: 1px;
     padding-bottom: 10px;
     display: flex;
+    margin: auto;
+    width: 80%;
 }
 #imgDetailscontainer{
     display:flex;
@@ -385,7 +387,7 @@ body {
     font-weight: 500;
     margin-bottom: 2px;
 }
-}
+
 #dede>span{
     color: #388e3c;
     margin-left: 2px;
@@ -428,6 +430,7 @@ body {
     gap: 15px;
     padding: 10px;
     margin-bottom: 45px;
+    margin-top: 40px;
   }
   .ttimg{
     display:flex;
@@ -467,9 +470,9 @@ body {
   #collection .img_div img {
     height: 200px;
   }
-  #collection .img_div > img:hover {
+  /* #collection .img_div > img:hover {
     width: 100%;
-  }
+  } */
   .brand {
     color: grey;
     margin-bottom: -10px;

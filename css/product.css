@@ -9,6 +9,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
+  margin-top: 20px;
 }
 #section {
   width: 15%;
@@ -53,52 +54,48 @@ body {
 }
 #collection .img_div img {
   width: 90%;
-  height: 400px;
+  height: 450px;
   cursor: pointer;
 }
-/* #collection .img_div > img:hover {
-  width: 100%;
-} */
+
 .brand {
   color: #878787;
   margin-bottom: -10px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
-  font-weight: 500;
+  font-weight: 550;
 }
-.title{
-   font-size: 14px;
-   line-height: 20px;
-   color: #212121;
-   font-weight: 400;
-   margin-bottom: -5px;
+.title {
+  font-size: 16px;
+  line-height: 20px;
+  color: #212121;
+  font-weight: 600;
+  margin-bottom: -5px;
 }
 .price_box {
   display: flex;
   align-items: center;
   margin-bottom: -10px;
-  /* margin-top: -20px;
-  margin-bottom: -20px; */
-  /* flex-direction: column; */
+ 
 }
-.price{
-    font-size: 16px;
-   line-height: 22px;
-   color: #212121;
-   font-weight: 500;
+.price {
+  font-size: 16px;
+  line-height: 22px;
+  color: #212121;
+  font-weight: 600;
 }
-.st_price{
-    font-size: 14px;
-   line-height: 20px;
-   color: #212121;
-   font-weight: 400;
+.st_price {
+  font-size: 14px;
+  line-height: 20px;
+  color: #212121;
+  font-weight: 400;
 }
-.color{
-    font-size: 12px;
-   line-height: 17px;
-   color: #878787;
-   font-weight: 400;
-   margin-bottom: -1px;
+.color {
+  font-size: 14px;
+  line-height: 17px;
+  color: #878787;
+  font-weight: 400;
+  margin-bottom: -1px;
 }
 .price_box .st_price {
   text-decoration: line-through;
@@ -108,8 +105,8 @@ body {
 .discount {
   color: #388e3c;
   font-size: 13px;
-line-height: 18px;
-font-weight: 500;
+  line-height: 18px;
+  font-weight: 500;
 }
 #collection div .logo {
   width: 30%;
@@ -150,12 +147,13 @@ font-weight: 500;
 #separator {
   color: red;
 }
+
 #section #disc_img {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 5px;
   cursor: pointer;
 }
-#section img {
+#section  #disc_img img {
   width: 100%;
 }
 #section h3,
@@ -185,44 +183,25 @@ li {
   font-size: larger;
 }
 
-/* @media all and (max-width: 1400px){
-    #cartListBox,#wishlist,#Display-Image,#CartBox,#products-detail {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-     #CartBox>#addToBagBtn,#products-detail{
-       /* height: auto; */
-       /* display: block;
-    }
-    #product-desc>div,#checkoutBox{
-        width: 80%;
-        margin: auto;
-    }
-      #quantityBox{
-        margin: auto;
-      }
-} */ 
-#outerPaginationDiv{
+#outerPaginationDiv {
   width: 80%;
   margin: auto;
-  
 }
-.pagination{
-display: flex;
-justify-content: right;
-align-items: center;
-padding: 10px 40px;
-border-radius: 6px;
-background-color: #fff;
-color: #383838;
-/* background: #878787; */
+.pagination {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 10px 40px;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #383838;
+  /* background: #878787; */
 }
-.pages{
+.pages {
   margin: 20px 30px;
 }
-.pages li{
-  display:inline;
+.pages li {
+  display: inline;
   margin: 0 10px;
   width: 45px;
   height: 45px;
@@ -236,41 +215,41 @@ color: #383838;
   background-position: 0 -45px;
   transition: background-position 0.5s;
 }
-.pages li.active{
+.pages li.active {
   color: #fff;
-  background-image: linear-gradient(#0468aa,#2874f0);
+  background-image: linear-gradient(#0468aa, #2874f0);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-.btn1, .btn2{
+.btn1,
+.btn2 {
   color: #2874f0;
   display: inline-flex;
   align-items: center;
   font-size: 22px;
   font-weight: 500;
   color: #383838;
-  background:transparent;
+  background: transparent;
   outline: none;
   border: none;
   cursor: pointer;
 }
 @media all and (max-width: 914px) {
-    #section,#description>p,#data,#sort>h2,#popularity{
-        display: none;
-    }
-    #sort{
-        display: flex;
-    }
-    /* >p,#description>div:first-child */
-    #collection{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    #price_box{
-        font-size: xx-small;
-    }
-    
+  #section,
+  #description > p,
+  #data,
+  #sort > h2,
+  #popularity {
+    display: none;
   }
-
-
-
-
+  #sort {
+    display: flex;
+  }
+  /* >p,#description>div:first-child */
+  #collection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #price_box {
+    font-size: xx-small;
+  }
+}
