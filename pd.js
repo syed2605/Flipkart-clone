@@ -117,12 +117,22 @@ function productDetails() {
   return details;
 }
 
-
+let cartArray = JSON.parse(localStorage.getItem('cartArray')) || [];
     let addToCart = document.getElementById("addToCart");
     addToCart.addEventListener("click", function () {
-      localStorage.setItem("cartArray", JSON.stringify(ele));
-      location.href = "./cartPage.html";
+      cartArray.push(ele);
+      localStorage.setItem("cartArray", JSON.stringify(cartArray));
+      // location.href = "./cartPage.html";
     });
+
+    let wishListArray = JSON.parse(localStorage.getItem('saveItemArray')) || [];
+    let addToWishList = document.getElementById("byNow");
+    addToWishList.addEventListener("click", function () {
+      wishListArray.push(ele);
+      localStorage.setItem("saveItemArray", JSON.stringify(wishListArray));
+      // location.href = "./cartPage.html";
+    });
+
     countDown();
     function countDown() {
       let hour = document.getElementById("hours").textContent;
