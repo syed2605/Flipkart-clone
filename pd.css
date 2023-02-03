@@ -29,8 +29,7 @@ body {
     padding-top: 1px;
     padding-bottom: 10px;
     display: flex;
-    margin: auto;
-    width: 80%;
+    width: 90%;
 }
 #imgDetailscontainer{
     display:flex;
@@ -119,7 +118,7 @@ body {
   }
   #circle i{
     position: relative;
-    left: 13px;
+    left: 10px;
     bottom: -12px;
   }
 
@@ -430,7 +429,6 @@ body {
     gap: 15px;
     padding: 10px;
     margin-bottom: 45px;
-    margin-top: 40px;
   }
   .ttimg{
     display:flex;
