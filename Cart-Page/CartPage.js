@@ -315,6 +315,23 @@ function displaydata(cartArr) {
         });
         let redirect1=document.querySelector('#c-order-button');
     redirect1.addEventListener('click',function(){
+        let itemsNo= document.getElementById("c2-price-no").textContent;
+        let itemsPrice= document.getElementById("c2-price").textContent;
+        let itemsDisPrice= document.getElementById("c2-dis-price").textContent;
+        let itemsPayPrice= document.getElementById("c2-tot-price").textContent;
+        let itemsSavePrice= document.getElementById("c2-save").textContent;
+        
+        console.log(itemsNo,itemsPrice,itemsDisPrice,itemsPayPrice,itemsSavePrice);
+        let xx=[];
+        let x={
+            itemsNo:itemsNo,
+            itemsPrice:itemsPrice,
+            itemsDisPrice:itemsDisPrice,
+            itemsPayPrice:itemsPayPrice,
+            itemsSavePrice:itemsSavePrice
+        };
+        xx.push(x);
+        localStorage.setItem("orderPrice",JSON.stringify(xx));
         location.href = "address.html";
     });
     });
