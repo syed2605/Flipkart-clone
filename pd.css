@@ -421,7 +421,7 @@ body {
     padding-left: 30px;
     padding-bottom: 20px;
 }
-#collection {
+#collection ,#collection1, #collection2{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     background-color: rgb(255, 255, 255);
     width: 98.55%;
@@ -443,7 +443,7 @@ body {
     line-height: 1.4;
   }
 
-  #collection > div {
+  #collection > div, #collection1 > div, #collection2 > div {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
@@ -454,7 +454,7 @@ body {
   #pro_detail {
     width: 100%;
   }
-  #collection > div:hover {
+  #collection > div:hover, #collection1 > div:hover, #collection2 > div:hover {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     display: block;
     padding-bottom: 10px;
@@ -466,7 +466,7 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  #collection .img_div img {
+  #collection .img_div img, #collection1 .img_div img, #collection2 .img_div img {
     height: 200px;
   }
   /* #collection .img_div > img:hover {
@@ -491,7 +491,7 @@ body {
   .discount {
     color: rgb(33, 197, 33);
   }
-  #collection div .logo {
+  #collection div .logo, #collection1 div .logo, #collection2 div .logo {
     width: 23%;
     height: 20px;
     /* margin-bottom: 10px; */

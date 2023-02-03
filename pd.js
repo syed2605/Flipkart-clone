@@ -273,17 +273,244 @@ let cartArray = JSON.parse(localStorage.getItem('cartArray')) || [];
       });
     }
 
-    let product_details = document.getElementById("product_details");
-    console.log(product_details);
+    
 
-    function myFunction() {
-        let first_div = document.getElementById('first-div');
-        let info_section = document.getElementById('info_section');
-      var w = window.outerWidth;
-      var h = window.outerHeight;
-      console.log(h);
-      if (h>1600) first_div.style.position="absolute";
-      var txt = "Window size: width=" + w + ", height=" + h;
-      document.getElementById("product_details").append(first_div,info_section)
+    async function fetchData2() {
+      let res = await fetch("./json/Kids.json");
+      let data = await res.json();
+      console.log(data);
+      displaySlider2(data);
     }
-    myFunction();
+    fetchData2();
+
+    let slider2 = document.getElementById("collection2");
+
+    function displaySlider2(data) {
+      slider2.innerHTML = null;
+      data.forEach((ele, ind) => {
+        if (ind < 5) {
+          let div = document.createElement("div");
+          div.setAttribute("class", "card");
+
+          let div1 = document.createElement("div");
+          div1.setAttribute("class", "img_div");
+
+          let img1 = document.createElement("img");
+          img1.src = ele.image;
+          img1.setAttribute("class", "image");
+
+          let imageArray = [];
+          imageArray.push(ele.image);
+          imageArray.push(ele.image1);
+
+          img1.addEventListener("mouseover", function () {
+            // console.log(ele);
+            var i = 0;
+            let id = setInterval(function () {
+              if (i == imageArray.length) {
+                i = 0;
+              }
+              div1.innerHTML = null;
+
+               img1 = document.createElement("img");
+              img1.src = imageArray[i];
+              img1.style.height="200px";
+            //   img1.setAttribute("class", "image");
+              div1.append(img1);
+              i++;
+            }, 1500);
+          });
+          img1.addEventListener("mouseout", function () {
+            console.log(id);
+            clearInterval(id);
+          });
+
+          img1.addEventListener("click", function () {
+            localStorage.setItem("item", JSON.stringify(ele));
+            location.href = "./pd.html";
+            console.log(ele);
+          });
+
+          div1.append(img1);
+
+          let div2 = document.createElement("div");
+          div2.setAttribute("class", "pro_detail");
+
+          let brand = document.createElement("h3");
+          brand.textContent = ele.brand;
+          brand.setAttribute("class", "brand");
+
+
+          let div22 = document.createElement("div");
+          div22.setAttribute("class", "ttimg");
+
+
+          let title = document.createElement("p");
+          title.textContent = ele.title;
+          title.setAttribute("class", "title1");
+
+          let img2 = document.createElement("img");
+          img2.src =
+            "https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png";
+          img2.setAttribute("class", "logo");
+
+          let div3 = document.createElement("div");
+          div3.setAttribute("class", "price_box");
+
+        //   console.log(ele);
+        //   console.log(ele.strickedPrice);
+          let price = document.createElement("p");
+          price.textContent = "₹" + ele.strickedPrice;
+          price.setAttribute("class", "price1");
+
+          let st_price = document.createElement("p");
+          st_price.textContent = "₹" + ele.price;
+          st_price.setAttribute("class", "st_price1");
+
+          let discount = document.createElement("p");
+          discount.textContent = ele.discount;
+          discount.setAttribute("class", "discount1");
+
+          div3.append(price, st_price, discount);
+
+          let delivery = document.createElement("h2");
+          delivery.textContent = "Free Delivery";
+          delivery.setAttribute("class", "delivery");
+          div22.append(brand,img2)
+          div2.append( div22,title, div3);
+
+          div.append(div1, div2, delivery);
+          slider2.append(div);
+        }
+      });
+    }
+
+    // // let product_details = document.getElementById("product_details");
+    // // console.log(product_details);
+
+    // function myFunction() {
+    //     let first_div = document.getElementById('first-div');
+    //     let info_section = document.getElementById('info_section');
+    //   var w = window.outerWidth;
+    //   var h = window.outerHeight;
+    //   console.log(h);
+    //   if (h>1600) first_div.style.position="absolute";
+    //   var txt = "Window size: width=" + w + ", height=" + h;
+    //   document.getElementById("product_details").append(first_div,info_section)
+    // }
+    // myFunction();
+
+
+
+
+    async function fetchData1() {
+      let res = await fetch("./json/Ethnics.json");
+      let data = await res.json();
+      console.log(data);
+      displaySlider1(data);
+    }
+    fetchData1();
+
+    let slider1 = document.getElementById("collection1");
+
+    function displaySlider1(data) {
+      slider1.innerHTML = null;
+      data.forEach((ele, ind) => {
+        if (ind < 5) {
+          let div = document.createElement("div");
+          div.setAttribute("class", "card");
+
+          let div1 = document.createElement("div");
+          div1.setAttribute("class", "img_div");
+
+          let img1 = document.createElement("img");
+          img1.src = ele.image;
+          img1.setAttribute("class", "image");
+
+          let imageArray = [];
+          imageArray.push(ele.image);
+          imageArray.push(ele.image1);
+
+          img1.addEventListener("mouseover", function () {
+            // console.log(ele);
+            var i = 0;
+            let id = setInterval(function () {
+              if (i == imageArray.length) {
+                i = 0;
+              }
+              div1.innerHTML = null;
+
+               img1 = document.createElement("img");
+              img1.src = imageArray[i];
+              img1.style.height="200px";
+            //   img1.setAttribute("class", "image");
+              div1.append(img1);
+              i++;
+            }, 1500);
+          });
+          img1.addEventListener("mouseout", function () {
+            console.log(id);
+            clearInterval(id);
+          });
+
+          img1.addEventListener("click", function () {
+            localStorage.setItem("item", JSON.stringify(ele));
+            location.href = "./pd.html";
+            console.log(ele);
+          });
+
+          div1.append(img1);
+
+          let div2 = document.createElement("div");
+          div2.setAttribute("class", "pro_detail");
+
+          let brand = document.createElement("h3");
+          brand.textContent = ele.brand;
+          brand.setAttribute("class", "brand");
+
+
+          let div22 = document.createElement("div");
+          div22.setAttribute("class", "ttimg");
+
+
+          let title = document.createElement("p");
+          title.textContent = ele.title;
+          title.setAttribute("class", "title1");
+
+          let img2 = document.createElement("img");
+          img2.src =
+            "https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png";
+          img2.setAttribute("class", "logo");
+
+          let div3 = document.createElement("div");
+          div3.setAttribute("class", "price_box");
+
+        //   console.log(ele);
+        //   console.log(ele.strickedPrice);
+          let price = document.createElement("p");
+          price.textContent = "₹" + ele.strickedPrice;
+          price.setAttribute("class", "price1");
+
+          let st_price = document.createElement("p");
+          st_price.textContent = "₹" + ele.price;
+          st_price.setAttribute("class", "st_price1");
+
+          let discount = document.createElement("p");
+          discount.textContent = ele.discount;
+          discount.setAttribute("class", "discount1");
+
+          div3.append(price, st_price, discount);
+
+          let delivery = document.createElement("h2");
+          delivery.textContent = "Free Delivery";
+          delivery.setAttribute("class", "delivery");
+          div22.append(brand,img2)
+          div2.append( div22,title, div3);
+
+          div.append(div1, div2, delivery);
+          slider1.append(div);
+        }
+      });
+    }
+
+   
