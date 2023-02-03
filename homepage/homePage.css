@@ -336,7 +336,7 @@ body{
   .FashionBestSellers_Contianer, .FurnitureBestseller_Contianer {
     width: 99%;
     height: 340px;
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
    
 }
 .bestofElectronicmoreOption, .BeautyFoodToymoreOption ,
@@ -406,6 +406,7 @@ body{
 .PickYourStyles_list, .DealOnTVAppliances_list,
 .BeautyFoodMore_list, .FashionBestSellers_list, .FurnitureBestseller_list{
     display: flex;
+   
 }
 .bestOfElectornic_image_Product{
     height: max-content;
@@ -415,6 +416,7 @@ body{
     justify-content: center;
     align-items: center;
    
+   
 }
 .bestOfElectornic_image_Product img{
     width: 90%;
@@ -423,9 +425,15 @@ body{
     justify-content: center;
     align-items: center;
     
+    
+}
+.bestOfElectornic_image_Product img:hover{
+  width: 100%;
+  transition: 0.2s;
+  
 }
 .bestofElectornicProduct_name{
-    font-size: 16px;
+    /* font-size: 16px; */
     font-weight: bold;
     padding-top: -15px;
     letter-spacing: 0.5px;
@@ -434,6 +442,7 @@ body{
     color:#388e3c;
     font-size: 17px;
     padding-bottom: -10px;
+    margin: -5px -5px;
 }
 .bestofElectronic_brand{
     color:rgb(193, 189, 189);
@@ -450,6 +459,8 @@ body{
 .PickYourStyles_product_item, .DealOnTVAppliances_product_item,
 .BeautyFoodMore_product_item, .FashionBestSellers_product_item, .FurnitureBestseller_product_item{
     display: flex;
+    gap: 25px;
+    transition: 0.5s;
    
 }
 
