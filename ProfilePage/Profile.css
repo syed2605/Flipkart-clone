@@ -1,0 +1,162 @@
+body{
+    font-family: 'Roboto',Arial, sans-serif;
+    color: #3e4e63;
+}
+#outer_div{
+    width: 90%;
+    margin: auto;
+    
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#first_div{
+    width: 25%;
+    background: #f1f3f6;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-right: 20px;
+    height: 100%;
+}
+#small_profile_div{
+    display: flex;
+    padding: 10px;
+    background: #fff;
+    margin-bottom: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* justify-content: space-evenly; */
+}
+#small_profile_div img{
+    margin-right: 15px;
+    width: 70px;
+}
+#small_MyOrder_div{
+    color: #969696;
+    background: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#order_div{
+   
+    display: flex;
+    padding: 10px;
+}
+#order_div img{
+    margin-right: 15px;
+    /* width: 70px; */
+}
+
+#acc_setting>div{
+    display: flex;
+    padding: 10px;
+    margin-bottom: -25px;
+}
+#acc_setting>div>img{
+    margin-right: 15px;
+    /* align-items:baseline; */
+}
+hr{
+    border: 0.5px solid #f1f3f6;
+}
+#acc_setting~div{
+    display: block;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    /* margin-top: -15px; */
+}
+#acc_info{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #273142;
+    justify-content:flex-end;
+    margin-left: 40px;
+   
+}
+#acc_info>h3:hover,#acc_infoh3:active{
+    width: 100%;
+    background: #f2f0f0db;
+    color: #2874f0;
+}
+#logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    padding: 30px;
+}
+svg{
+    margin-right: 20px;
+}
+#logout span{
+    font-size:x-large ;
+    font-weight:bolder ;
+}
+
+
+
+
+/* Second DIV */
+#second_div{
+    width: 65%;
+    height: 100%;
+    background-image: url('https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/myProfileFooter_4e9fe2.png');
+
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    object-fit: contain;
+
+/* background-position:bottom; */
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+}
+#personal_info>div{
+    display: flex;
+    align-items: center;
+}
+#personal_info>div>h3{
+    margin-left: 20px;
+    color: #2874f0;
+}
+#info_input{
+    display: flex;
+    padding: 10px;
+}
+#info_input>input{
+    padding: 20px;
+    margin-right: 30px;
+    font-weight: bold;
+    font-size: larger;
+    cursor: not-allowed;
+}
+#info_input>input[type='submit']{
+    background: #2874f0;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    display: none;
+}
+.edit{
+    cursor: pointer;
+}
+#gender>input,label{
+    padding: 20px;
+    margin-right: 30px;
+    font-weight: bold;
+    font-size: larger;
+    
+}
+#gender>input{
+    cursor: not-allowed;
+}
+#FAQ p,#FAQ h3{
+    
+    font-size: larger;
+}
+
+#deactivate>h2{
+    color: #2874f0;
+    margin-bottom: 45px;
+    margin-top: 50px;
+}

@@ -1,0 +1,28 @@
+#navbar{
+    display: flex;
+    width: 85%;
+    height:150px;
+    margin: auto;
+    background-color: white;
+   
+}
+#prod{
+   
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    background-color: white;
+
+}
+#prod>a>img{
+    width: 80%;
+    background-color: white;
+}
+#prod>a>p{
+    
+   
+    width: auto;
+    color: black;
+    text-decoration: none;
+}
