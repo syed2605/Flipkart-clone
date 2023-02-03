@@ -186,31 +186,34 @@ cvvInput.addEventListener("keyup", function (){
 
 
 })
-
-document.getElementById("addadr").addEventListener("click",function(){
-  console.log("gg")
-  var username=document.getElementById("usern").value
-  var mobile=document.getElementById("mobilen").value
-  var pin=document.getElementById("pin").value
-  var local=document.getElementById("local").value
-  var adress=document.getElementById("adress").value
-  var town=document.getElementById("town").value
-  var state=document.getElementById("state").value
-  var userSpecialAdd="work";
-  var obj={username:username,
-  mobile:mobile,
-  pin:pin,
-  local:local,
-  adress:adress,
-  town:town,
-  state:state,
-  userSpecialAdd:userSpecialAdd}
-  var rasta=JSON.parse(localStorage.getItem("useraddArr"))||[]
-  rasta.push(obj)
-  localStorage.setItem("useraddArr",JSON.stringify(rasta));
-  addressDisplay()
-
-})
+var cdx=false;
+if(cdx===false){
+  document.getElementById("addadr").addEventListener("click",function(){
+    console.log("gg")
+    var username=document.getElementById("usern").value
+    var mobile=document.getElementById("mobilen").value
+    var pin=document.getElementById("pin").value
+    var local=document.getElementById("local").value
+    var adress=document.getElementById("adress").value
+    var town=document.getElementById("town").value
+    var state=document.getElementById("state").value
+    var userSpecialAdd="work";
+    var obj={username:username,
+    mobile:mobile,
+    pin:pin,
+    local:local,
+    adress:adress,
+    town:town,
+    state:state,
+    userSpecialAdd:userSpecialAdd}
+    var rasta=JSON.parse(localStorage.getItem("useraddArr"))||[]
+    rasta.push(obj)
+    localStorage.setItem("useraddArr",JSON.stringify(rasta));
+    cdx=true;
+    addressDisplay()
+  
+  })
+}
 
 
   function displaypay()
@@ -223,3 +226,27 @@ document.getElementById("addadr").addEventListener("click",function(){
 
 
   var cartArr = JSON.parse(localStorage.getItem('cartArray'))||[];
+  var orderPriceObj=JSON.parse(localStorage.getItem('orderPrice'))||[];
+  // orderPriceObj=[{itemsDisPrice:"-₹27,000",
+  //   itemsNo
+  //   : 
+  //   "3",
+  //   itemsPayPrice
+  //   : 
+  //   "₹42,900",
+  //   itemsPrice
+  //   : 
+  //   "₹70,000",
+  //   itemsSavePrice
+  //   : 
+  //   "₹27,100"}];
+  console.log((orderPriceObj)+" orderPricevbsihdvbsidvb");
+  let {itemsNo,itemsPrice,itemsDisPrice,itemsPayPrice,itemsSavePrice} = orderPriceObj[0];
+
+
+
+   document.getElementById("c2-price-no").textContent=itemsNo;
+  document.getElementById("c2-price").textContent=itemsPrice;
+ document.getElementById("c2-dis-price").textContent=itemsDisPrice;
+    document.getElementById("c2-tot-price").textContent=itemsPayPrice;
+  document.getElementById("c2-save").textContent =  itemsSavePrice;
