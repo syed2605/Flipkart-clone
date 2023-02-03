@@ -1,3 +1,11 @@
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial,sans-serif;
+    background-color: #f1f3f6;
+}
 #header
 {
     display: flex;
@@ -22,3 +30,556 @@
     margin-top: 10px;
     width: 80px;
 }
+#parent
+{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+}
+#all
+{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 10px;
+    
+}
+#price_details
+{
+    width: 30%;
+}
+#userinf
+{
+    display: flex;
+    background-color: white;
+    /* flex-direction: column; */
+    /* gap: 10px; */
+    padding: 20px;
+}
+.num
+{
+    font-size: 12px;
+    color: #2874f0;
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    padding: 3px 7px;
+    vertical-align: baseline;
+    margin-right: 17px;
+    
+}
+.num_div
+{
+    height: 48px;
+    text-transform: uppercase;
+    color: #878787;
+    font-size: 16px;
+    font-weight: 500;
+    /* padding: 14px 24px; */
+    border-radius: 2px 2px 0 0;
+}
+
+#Header{
+    display:flex;
+    background-color: #2874f0;
+    height: 56px;
+    width: 100%;
+
+}
+#logo{
+    width: 75px;
+    padding: 10px;
+}
+#logo-Flip{
+    width: 101%;
+}
+#logo-explore{
+    display: flex;
+    margin-top: -15px;
+}
+#logo-explore p{
+    font-family: 'Roboto',Arial,sans-serif;
+letter-spacing: 0;
+    font-size: 11px;
+    gap: 1px;
+font-style: italic;
+color: #f0f0f0;
+}
+#plus-logo{
+    color: #ffe500 !important;
+font-weight: 500;
+margin-right: 2px;
+margin-left: 2px;
+}
+#flip-plus{
+    width: 9px;
+height: 9px;
+margin-top: 11px;
+}
+.filler
+{
+    width: 20%;
+}
+#name-check
+{
+display:flex ;
+}
+.div_name
+{
+    color: #878787;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+#address{
+    display: flex;
+    background-color: #2874f0;
+    color: white;
+    padding: 20px;
+    height: 10px;
+}
+#payment
+{
+    display: flex;
+    background-color: #2874f0;
+    color: white;
+    padding: 20px;
+}
+#cart-b1-b
+{
+    padding: 20px;
+    background-color: #f5faff;
+    display: block;
+}
+
+#Deliver_btn
+{
+    background: #fb641b;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 200px;
+    height: 48px;
+    margin-top: 12px;
+}    
+#addadr
+{
+  background: #fb641b;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 200px;
+    height: 48px;
+    margin-top: 12px;
+}
+
+#c-user-name
+{
+    font-weight: 500; 
+}
+input
+{
+    width: 50%;
+    font-size: 14px;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 2px;
+    padding: 10px;
+    box-shadow: none;
+
+}
+.in-two
+{
+display: flex;
+gap: 10px;
+}
+#c-user-adress-door
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea
+{
+    writing-mode: horizontal-tb !important;
+    font-family: monospace;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    resize: auto;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    background-color: field;
+    column-count: initial !important;
+    margin: 0em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    padding: 2px;
+}
+.rad input
+{
+width: 20px;
+height: 20px;
+
+}
+.rad
+{
+    gap: 10px;
+    padding: 20px;
+}
+
+.tab {
+  float: left;
+  /* border: 1px solid lightblue; */
+  background-color: #f5faff;
+  width: 46%;
+  /* border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px; */
+  /* position: relative; */
+  /* overflow: scroll; */
+  /* top: 50px; */
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  display: block;
+  background-color: #f5faff;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s ease;
+  /* height: 76px; */
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #2874f0;
+  color: white;
+  }
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #f5faff;
+  color: black;
+  border-color: currentcolor currentcolor currentcolor #2874f0;
+  border-style: none none none solid;
+  border-width: medium medium medium 4px;
+
+}
+.tab-button-img
+{
+    filter: invert(0%);
+    transition: filter 0.2s ease;
+}
+.tab button:hover .tab-button-img
+{
+    filter: invert(100%);
+}
+.tab button.active .tab-button-img
+{
+    filter: invert(0%);
+}
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  /* border: 1px solid lightblue; */
+  width: 50%;
+  height: 500px;
+  border-left: none;
+  display: none;
+  box-sizing: border-box;
+  position: relative;
+  top: 20px;
+  left: 28px;
+
+}
+.tab-button {
+  display: flex;
+  margin: auto;
+}
+.tab-button-img {
+  width: 20%;
+  margin: auto;
+}
+
+.tab-button-text h3 {
+  font-size: 1rem;
+}
+.tab-button-text p {
+  font-size: 0.875rem;
+}
+
+.tab-button-text {
+  width: 80%;
+  margin: auto;
+  margin-left: -40px;
+}
+.tablinks {
+  width: 20%;
+  margin: auto;
+}
+
+/* removing step from number tag */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#upi-logos {
+  display: flex;
+  /* width: 100%; */
+  height: 140px;
+  text-align: center;
+  justify-content: center;
+}
+#upi-logos > div {
+  position: relative;
+  width: 24%;
+}
+#upi-logos > div > div {
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#upi-logos img {
+  border: 1px solid gray;
+  border-radius: 40px;
+  padding: 5px;
+  /* width: 100%; */
+}
+
+#upi-logos img:hover {
+  border: 2px solid #2874f0;
+}
+
+#upi * {
+  margin: 10px;
+}
+.payment-verify-btn {
+  display: flex;
+  flex-direction: row;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  padding: 12px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  border-color: white;
+  background-color: #fb641b;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  /* box-sizing: border-box; */
+}
+.input-details {
+  background: white;
+  border-color: currentcolor currentcolor #2874f0;
+  border-style: none none solid;
+  border-width: 0px 0px 1px;
+  border-radius: 8px;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  padding: 16px;
+  transition: border-color 0.2s ease 0s;
+  width: 100%;
+  caret-color: rgb(232, 0, 113);
+  box-sizing: border-box;
+}
+.checkbox-payment {
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(63, 65, 77);
+  box-sizing: border-box;
+}
+#credit * {
+  margin: 10px auto;
+}
+
+#credit > :nth-child(2) {
+  display: flex;
+  margin: 0;
+  width: 69%;
+  cursor: pointer;
+}
+#credit > :nth-child(4) {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+#know-more > input[type="checkbox"] {
+  margin: 0 0.5rem 0 0.2rem;
+  font-size: 20px;
+}
+#know-more > p {
+  margin: 0;
+}
+
+#know-more a {
+  text-decoration: none;
+}
+
+.month-cvv {
+  display: flex;
+  gap: 10px;
+}
+.month-cvv input {
+  width: 50%;
+  text-align: center;
+}
+.Section-hr {
+  color: #2874f0;
+}
+#upi-logos:hover {
+  cursor: pointer;
+}
+#upi-logos img:focus {
+  border: 2px solid #2874f0;
+}
+.netbanking-checkbox {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 20px 0 20px;
+  box-sizing: border-box;
+}
+#netbanking * {
+  margin: 15px 0 0 0;
+}
+#netbanking button {
+  text-align: center;
+}
+
+#shopnow * {
+  margin-top: 12px;
+}
+.snpl-content {
+  display: flex;
+  gap: 10px;
+}
+.snpl-content > div p {
+  margin-top: -15px;
+  color: red;
+}
+#cod * {
+  margin: 20px 0 0 0;
+}
+#cod > button {
+  box-sizing: border-box;
+  width: 100%;
+}
+#paytm * {
+  margin-top: 12px;
+}
+#giftcard * {
+  margin-top: 12px;
+}
+#giftcard-pin {
+  display: flex;
+  gap: 10px;
+}
+#giftcard-pin > input {
+  width: 30%;
+}
+#giftcard-pin > button {
+  width: 70%;
+}
+#emi * {
+  margin-top: 10px;
+}
+
+/* form validation css  */
+#cardnumber-warn,
+.payment-warning {
+  color: red;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  position: relative;
+  top: -2px;
+  margin: 0;
+}
+
+.payment-warning:first-of-type {
+  top: 18px;
+}
+
+#month-warning {
+  /* position: relative; */
+  top: -30px;
+  left: -100px;
+  width: 60%;
+}
+
+#cvv-warning {
+  /* position: relative; */
+  top: -30px;
+  right: -100px;
+  /* left: -30px; */
+}
+.hide,
+.hide1,
+.hide2 {
+  display: none;
+}
+.mtyr {
+    display: flex;
+    position: relative;
+    height: 20px;
+    text-align: center;
+    justify-content: center;
+  }
+  .tab
+  {
+    /* box-sizing: border-box; */
+    overflow: scroll;
+    height: 600px;
+  }
+  .hidd{
+    display: none;
+    transition: display 0.5 ease;
+  }
