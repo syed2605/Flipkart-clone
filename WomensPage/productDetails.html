@@ -13,43 +13,45 @@
       @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
     </style>
     <style>
-         body{
-            font-family: 'Roboto',Arial, sans-serif;
-            color: #212121;
-        }
-        #product_details{
-            width: 80%;
-            margin: auto;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            /* position: absolute; */
-            display: flex;
-            /* border: 2px solid red; */
-            justify-content: space-between;
-        }
-        #first-div{
-            width: 40%;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            /* border: 2px solid blue; */
-            position: sticky;
-            right: 30%;
-            top: 0;
-            left: 10%;
-            /* bottom: 0; */
-        }
-        #image_section{
-            width: 100%;
-            /* border: 2px solid blue; */
-        }
-        #info_section{
-            width: 40%;
-            height: auto;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            /* border: 2px solid blue; */
-            position: absolute;
-            padding: 10px;
-            /* left: 50%; */
-            right: 10%;
-            /* top: 0;
+      body {
+        font-family: "Roboto", Arial, sans-serif;
+        color: #212121;
+      }
+      #product_details {
+        width: 80%;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        /* position: absolute; */
+        height:500px;
+        display: flex;
+        border: 2px solid red;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+      #first-div {
+        width: 40%;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        /* border: 2px solid blue; */
+        position: fixed;
+        right: 30%;
+        top: 0;
+        left: 10%;
+        /* bottom: 0; */
+      }
+      #image_section {
+        width: 100%;
+        /* border: 2px solid blue; */
+      }
+      #info_section {
+        width: 40%;
+        height: auto;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        /* border: 2px solid blue; */
+        position: absolute;
+        padding: 10px;
+        /* left: 50%; */
+        right: 10%;
+        /* top: 0;
             bottom: 0; */
       }
       #display_price {
@@ -296,60 +298,58 @@
       }
       #slider > div {
         border: 2px solid blue;
-       }
-       #collection{
-           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            position: absolute;
-            top: 100%;
-            margin-top: 50px;
-        }
-        #collection>div{
-            display: flex;
-            flex-direction: column;
-            /* align-items: center; */
-            padding: 10px;
-            justify-content: left;
-           
-        }
-        #pro_detail{
-            width: 100%;
-        }
-        #collection>div:hover{
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            display: block;
-            padding-bottom: 10px;
-            /* font-size: large; */
-        }
-        .img_div{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        #collection .img_div img{
-            width: 80%;
-            height: 400px;
-            
-        }
-        #collection .img_div>img:hover{
-            width: 100%;
-        }
-        .brand{
-            color: grey;
-            margin-bottom: -10px;
-        }
-        .price_box{
-            display: flex;
-            align-items: center;
-            margin-top: -20px;
-            margin-bottom: -20px;
-            /* flex-direction: column; */
-        }
-       .price_box .st_price{
+      }
+      #collection {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        position: absolute;
+        top: 100%;
+        margin-top: 50px;
+      }
+      #collection > div {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        padding: 10px;
+        justify-content: left;
+      }
+      #pro_detail {
+        width: 100%;
+      }
+      #collection > div:hover {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        display: block;
+        padding-bottom: 10px;
+        /* font-size: large; */
+      }
+      .img_div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #collection .img_div img {
+        width: 80%;
+        height: 400px;
+      }
+      #collection .img_div > img:hover {
+        width: 100%;
+      }
+      .brand {
+        color: grey;
+        margin-bottom: -10px;
+      }
+      .price_box {
+        display: flex;
+        align-items: center;
+        margin-top: -20px;
+        margin-bottom: -20px;
+        /* flex-direction: column; */
+      }
+      .price_box .st_price {
         text-decoration: line-through;
         margin-left: 10px;
         margin-right: 10px;
@@ -372,89 +372,121 @@
     </style>
   </head>
   <body>
-    <div id="product_details">
+      <div id="product_details">
         <div id="first-div">
-            <div class="cart-img-container">
-                <div class="small-img-container">
-                   <img src="" alt="">
-                   <img src="" alt="">
-                </div>
-                <div class="target-img-container">
-                  <img  src="" alt="">
-                </div>
-             </div>
-             <div id="cartButtons">
-                <button id="addToCart"> <i class="fa-solid fa-cart-shopping"></i>ADD TO CART</button>
-                <button id="byNow"><span class="_3iRXzi"></span>BUY NOW</button>
-                
+          <div class="cart-img-container">
+            <div class="small-img-container">
+              <img src="" alt="" />
+              <img src="" alt="" />
             </div>
+            <div class="target-img-container">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div id="cartButtons">
+            <button id="addToCart">
+              <i class="fa-solid fa-cart-shopping"></i>ADD TO CART
+            </button>
+            <button id="byNow"><span class="_3iRXzi"></span>BUY NOW</button>
+          </div>
         </div>
         <div id="info_section">
-            <div id="count-down">
-                <img src="https://rukminim1.flixcart.com/fk-p-flap/92/92/image/d4cdfaed48b64773.jpg?q=90" alt="">
-                <h2>Big Bachat Dhamaal Sale Starts in <span id="hours">05</span>  hrs : <span id="minutes">1</span> mins : <span id="seconds">60 </span>secs</h2>
-            </div>
-                <div id="brief_info">
-
-                </div>
-                <div id="offer">
-                    <h3>Available offers</h3>
-                    <li><img src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" id="marking-logo"><span>Bank Offer</span> 10% off on Kotak Bank Credit Cards and Credit EMI Trxns, up to ₹1,000. On orders of ₹5,000 and above <span class="TC">T&C</span></li>
-                    <li><img src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" id="marking-logo"><span>Bank Offer</span> Flat ₹100 Instant Cashback on Paytm Wallet. Min Order Value ₹1000. Valid once per Paytm account<span class="TC">T&C</span></li>
-                    <li><img src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" id="marking-logo"><span>Bank Offer</span> 5% Cashback on Flipkart Axis Bank Card<span class="TC">T&C</span></li>
-                    <li><img src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" id="marking-logo"> Buy this Product and Get Extra ₹500 Off on Two-Wheelers<span class="TC">T&C</span></li>
-                </div>
-
-        <div id="get_details">
-          <div id="add_delivery_info">
-            <div id="pincode_div">
-              <div>
-                <img
-                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZWxsaXBzZSBjeD0iOSIgY3k9IjE0LjQ3OCIgZmlsbD0iI0ZGRTExQiIgcng9IjkiIHJ5PSIzLjUyMiIvPjxwYXRoIGZpbGw9IiMyODc0RjAiIGQ9Ik04LjYwOSA3LjAxYy0xLjA4IDAtMS45NTctLjgyNi0xLjk1Ny0xLjg0NSAwLS40ODkuMjA2LS45NTguNTczLTEuMzA0YTIuMDIgMi4wMiAwIDAgMSAxLjM4NC0uNTRjMS4wOCAwIDEuOTU2LjgyNSAxLjk1NiAxLjg0NCAwIC40OS0uMjA2Ljk1OS0uNTczIDEuMzA1cy0uODY0LjU0LTEuMzgzLjU0ek0zLjEzIDUuMTY1YzAgMy44NzQgNS40NzkgOC45MjIgNS40NzkgOC45MjJzNS40NzgtNS4wNDggNS40NzgtOC45MjJDMTQuMDg3IDIuMzEzIDExLjYzNCAwIDguNjA5IDAgNS41ODMgMCAzLjEzIDIuMzEzIDMuMTMgNS4xNjV6Ii8+PC9nPjwvc3ZnPg=="
-                  alt=""
-                />
-                <h2>Deliver to</h2>
-              </div>
-              <div>
-                <h3>Services</h3>
-                <h3>Cash on Delivery Available</h3>
-              </div>
-            </div>
-            <div id="pincodeInput">
-              <input type="numder" id="enter_pin" />
-              <h2>Check</h2>
-            </div>
-            <hr />
-            <!-- <div id="super-coin">
-                                 <p>Schedule delivery at your convenience</p> -->
+          <div id="count-down">
             <img
-              src="https://rukminim1.flixcart.com/lockin/100/100/images/CCO__PP_2019-07-14.png?q=50"
+              src="https://rukminim1.flixcart.com/fk-p-flap/92/92/image/d4cdfaed48b64773.jpg?q=90"
               alt=""
             />
-            <!-- </div> -->
-
-            <div id="product-detail">
-              <h1 id="headline">Product Details</h1>
-              <!-- <div><h3>Blouse Piece </h3><p>${ele.BlousePiece}</p></div> -->
+            <h2>
+              Big Bachat Dhamaal Sale Starts in <span id="hours">05</span> hrs :
+              <span id="minutes">1</span> mins : <span id="seconds">60 </span>secs
+            </h2>
+          </div>
+          <div id="brief_info"></div>
+          <div id="offer">
+            <h3>Available offers</h3>
+            <li>
+              <img
+                src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
+                id="marking-logo"
+              /><span>Bank Offer</span> 10% off on Kotak Bank Credit Cards and
+              Credit EMI Trxns, up to ₹1,000. On orders of ₹5,000 and above
+              <span class="TC">T&C</span>
+            </li>
+            <li>
+              <img
+                src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
+                id="marking-logo"
+              /><span>Bank Offer</span> Flat ₹100 Instant Cashback on Paytm
+              Wallet. Min Order Value ₹1000. Valid once per Paytm account<span
+                class="TC"
+                >T&C</span
+              >
+            </li>
+            <li>
+              <img
+                src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
+                id="marking-logo"
+              /><span>Bank Offer</span> 5% Cashback on Flipkart Axis Bank
+              Card<span class="TC">T&C</span>
+            </li>
+            <li>
+              <img
+                src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
+                id="marking-logo"
+              />
+              Buy this Product and Get Extra ₹500 Off on Two-Wheelers<span
+                class="TC"
+                >T&C</span
+              >
+            </li>
+          </div>
+  
+          <div id="get_details">
+            <div id="add_delivery_info">
+              <div id="pincode_div">
+                <div>
+                  <img
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZWxsaXBzZSBjeD0iOSIgY3k9IjE0LjQ3OCIgZmlsbD0iI0ZGRTExQiIgcng9IjkiIHJ5PSIzLjUyMiIvPjxwYXRoIGZpbGw9IiMyODc0RjAiIGQ9Ik04LjYwOSA3LjAxYy0xLjA4IDAtMS45NTctLjgyNi0xLjk1Ny0xLjg0NSAwLS40ODkuMjA2LS45NTguNTczLTEuMzA0YTIuMDIgMi4wMiAwIDAgMSAxLjM4NC0uNTRjMS4wOCAwIDEuOTU2LjgyNSAxLjk1NiAxLjg0NCAwIC40OS0uMjA2Ljk1OS0uNTczIDEuMzA1cy0uODY0LjU0LTEuMzgzLjU0ek0zLjEzIDUuMTY1YzAgMy44NzQgNS40NzkgOC45MjIgNS40NzkgOC45MjJzNS40NzgtNS4wNDggNS40NzgtOC45MjJDMTQuMDg3IDIuMzEzIDExLjYzNCAwIDguNjA5IDAgNS41ODMgMCAzLjEzIDIuMzEzIDMuMTMgNS4xNjV6Ii8+PC9nPjwvc3ZnPg=="
+                    alt=""
+                  />
+                  <h2>Deliver to</h2>
+                </div>
+                <div>
+                  <h3>Services</h3>
+                  <h3>Cash on Delivery Available</h3>
+                </div>
+              </div>
+              <div id="pincodeInput">
+                <input type="numder" id="enter_pin" />
+                <h2>Check</h2>
+              </div>
+              <hr />
+              <!-- <div id="super-coin">
+                                   <p>Schedule delivery at your convenience</p> -->
+              <img
+                src="https://rukminim1.flixcart.com/lockin/100/100/images/CCO__PP_2019-07-14.png?q=50"
+                alt=""
+              />
+              <!-- </div> -->
+  
+              <div id="product-detail">
+                <h1 id="headline">Product Details</h1>
+                <!-- <div><h3>Blouse Piece </h3><p>${ele.BlousePiece}</p></div> -->
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+    <div id="cl">
+      <div id="cl1"></div>
+      <div id="collection">
+
+      </div>
     </div>
-
-
-    <div id="collection">
-
-    </div>
-</body>
-<script>
-    let ele = JSON.parse(localStorage.getItem('item'))
-    // let imgDiv= document.getElementById('image_section');
-    // let image = document.createElement('img');
-    // image.src = obj.image;
-    // imgDiv.append(image);
-    //  console.log(ele)
-
+  </body>
+  <script>
+    let ele = JSON.parse(localStorage.getItem("item"));
     function showImagesOnCart(el) {
       let smallImgContainer = document
         .querySelector(".small-img-container>img:nth-child(1)")
@@ -602,11 +634,11 @@
     }
     countDown();
 
-    async function fetchData(){
-        let res = await fetch('../json/sarees1.json');
-        let data = await res.json();
-        // console.log(data);
-        displaySlider(data);
+    async function fetchData() {
+      let res = await fetch("../json/sarees1.json");
+      let data = await res.json();
+      console.log(data);
+      displaySlider(data);
     }
     fetchData();
 
@@ -708,15 +740,17 @@
     let product_details = document.getElementById("product_details");
     console.log(product_details);
 
-    // function myFunction() {
-    //     let first_div = document.getElementById('first-div');
-    //     let info_section = document.getElementById('info_section');
-    //   var w = window.outerWidth;
-    //   var h = window.outerHeight;
-    //   var txt = "Window size: width=" + w + ", height=" + h;
-    //   document.getElementById("product_details").append(first_div,info_section)
-    // }
-    // myFunction();
+    function myFunction() {
+        let first_div = document.getElementById('first-div');
+        let info_section = document.getElementById('info_section');
+      var w = window.outerWidth;
+      var h = window.outerHeight;
+      console.log(h);
+      if (h>1600) first_div.style.position="absolute";
+      var txt = "Window size: width=" + w + ", height=" + h;
+      document.getElementById("product_details").append(first_div,info_section)
+    }
+    myFunction();
     //     window.addEventListener("scroll", function () {
     //   // console.log(this.window.scroll);
     //   var top = window.pageYOffset || document.documentElement.scrollTop,
