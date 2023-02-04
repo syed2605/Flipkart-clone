@@ -1,31 +1,31 @@
 var cartArr = JSON.parse(localStorage.getItem('cartArray'))||[];
 // console.log(cartArr);
-// var cartArr=[
-//     {
-//         image: "https://rukminim1.flixcart.com/image/224/224/kuwzssw0/computer/x/l/a/redmibook-15-pro-thin-and-light-laptop-redmi-original-imag7xhnakyazyma.jpeg?q=90",
-//         title: "Redmi pro i5 11th gen- sdchcbkck  idci  sdci chsdu cho sdddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
-//         spec: "15.6 inch, Charcoal Gray, 1.8 kg, With MS Office",
-//         strickedPrice: "50,000",
-//         price: "30,000",
-//         discount:"33%",
-//     },
-//     {
-//         image: "https://rukminim1.flixcart.com/image/224/224/kuwzssw0/computer/x/l/a/redmibook-15-pro-thin-and-light-laptop-redmi-original-imag7xhnakyazyma.jpeg?q=90",
-//         title: "Redmi pro i5 11th gen- sdchcbkck  idci  sdci chsdu cho sdddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
-//         spec: "15.6 inch, Charcoal Gray, 1.8 kg, With MS Office",
-//         strickedPrice: "15,000",
-//         price: "10,000",
-//         discount:"33%",
-//     },
-//     {
-//         image: "https://rukminim1.flixcart.com/image/224/224/kuwzssw0/computer/x/l/a/redmibook-15-pro-thin-and-light-laptop-redmi-original-imag7xhnakyazyma.jpeg?q=90",
-//         title: "Redmi pro i5 11th gen- sdchcbkck  idci  sdci chsdu cho sdddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
-//         spec: "15.6 inch, Charcoal Gray, 1.8 kg, With MS Office",
-//         strickedPrice: "5,000",
-//         price: "3,000",
-//         discount:"33%",
-//     },
-// ]
+var cartArr=[
+    {
+        image: "https://rukminim1.flixcart.com/image/224/224/kuwzssw0/computer/x/l/a/redmibook-15-pro-thin-and-light-laptop-redmi-original-imag7xhnakyazyma.jpeg?q=90",
+        title: "Redmi pro i5 11th gen- sdchcbkck  idci  sdci chsdu cho sdddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        spec: "15.6 inch, Charcoal Gray, 1.8 kg, With MS Office",
+        strickedPrice: "50,000",
+        price: "30,000",
+        discount:"33%",
+    },
+    {
+        image: "https://rukminim1.flixcart.com/image/224/224/kuwzssw0/computer/x/l/a/redmibook-15-pro-thin-and-light-laptop-redmi-original-imag7xhnakyazyma.jpeg?q=90",
+        title: "Redmi pro i5 11th gen- sdchcbkck  idci  sdci chsdu cho sdddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        spec: "15.6 inch, Charcoal Gray, 1.8 kg, With MS Office",
+        strickedPrice: "15,000",
+        price: "10,000",
+        discount:"33%",
+    },
+    {
+        image: "https://rukminim1.flixcart.com/image/224/224/kuwzssw0/computer/x/l/a/redmibook-15-pro-thin-and-light-laptop-redmi-original-imag7xhnakyazyma.jpeg?q=90",
+        title: "Redmi pro i5 11th gen- sdchcbkck  idci  sdci chsdu cho sdddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        spec: "15.6 inch, Charcoal Gray, 1.8 kg, With MS Office",
+        strickedPrice: "5,000",
+        price: "3,000",
+        discount:"33%",
+    },
+]
 // var saveArr=[
 //     {
 //         image: "https://rukminim1.flixcart.com/image/224/224/kuwzssw0/computer/x/l/a/redmibook-15-pro-thin-and-light-laptop-redmi-original-imag7xhnakyazyma.jpeg?q=90",

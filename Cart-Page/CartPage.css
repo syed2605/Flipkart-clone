@@ -262,6 +262,9 @@ body{
 #c-child-2{
     display: flex;
     height:fit-content;
+    margin-top: 43px;
+    margin-left: 17px;
+    margin-bottom: -21px;
 }
 #c-qty-change{
     display: flex;
