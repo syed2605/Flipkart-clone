@@ -362,20 +362,20 @@ function displaydata(cartArr) {
 // addressDisplay();
 function addressDisplay(){
     var useraddressArr= JSON.parse(localStorage.getItem('useraddArr'))||[];
-    useraddressArr=[
-        {
-            userName: "John Abraham",
-            userAddress: "Madhurangar,Kobbarithota,Vijayawada",
-            userPin: "520011",
-            userSpecialAdd: "HOME",
-        },
-        {
-            userName: "John Abraham",
-            userAddress: "Madhurangar,Kobbarithota,Vijayawada",
-            userPin: "565821",
-            userSpecialAdd: "OFFICE",
-        }
-    ];
+    // useraddressArr=[
+    //     {
+    //         userName: "John Abraham",
+    //         userAddress: "Madhurangar,Kobbarithota,Vijayawada",
+    //         userPin: "520011",
+    //         userSpecialAdd: "HOME",
+    //     },
+    //     {
+    //         userName: "John Abraham",
+    //         userAddress: "Madhurangar,Kobbarithota,Vijayawada",
+    //         userPin: "565821",
+    //         userSpecialAdd: "OFFICE",
+    //     }
+    // ];
     if (useraddressArr.length > 0)
     {
         let addressDiv=document.getElementById("cart-b1-b");

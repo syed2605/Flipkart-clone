@@ -1907,7 +1907,7 @@ var aaaa=`<div id="logo">
 </div>
 <div id="cart-box">
 <div id="cart" >
-    <a href="#cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+    <a href="../Cart-Page/CartPage.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
 </div>
 </div>
 </div>`;
