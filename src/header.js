@@ -22,7 +22,7 @@ function toggle() {
   more.addEventListener("mouseleave", toggle);
 
 
-  const loggedIn= JSON.parse(localStorage.getItem("loggedIn"))||false;
+  const loggedIn= JSON.parse(localStorage.getItem("loggedIn"))||true;
   if (loggedIn==true)
   {
       var logInBox = document.getElementById("Login-box");
@@ -68,3 +68,7 @@ function toggle() {
           }
       }
   }
+
+  
+
+  

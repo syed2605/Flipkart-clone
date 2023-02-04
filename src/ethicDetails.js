@@ -172,7 +172,8 @@ let slider = document.getElementById('collection');
 
             let imageArray=[];
             imageArray.push(ele.image);
-            imageArray.push(ele.image1)
+            if (ele.image1!=undefined) imageArray.push(ele.image1);
+            
             
            
             img1.addEventListener('mouseover', function(){
@@ -285,3 +286,130 @@ console.log(product_details);
 //     div.style.paddingTop = "initial";
 //   }
 // });
+
+
+var happend=document.getElementById("cart-navbar");
+var aaaa=`<div id="logo">
+<a href="#home.html" id="logo-attribute">
+    <img id="logo-Flip" src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt="Flip-Logo">
+</a>
+<div id="logo-explore">
+    <p>Explore</p>
+    <p id="plus-logo">Plus</p>
+    <img id="flip-plus" src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png" alt="Flip-plus">
+</div>
+</div>
+<div class="search-input">
+<input type="text" class="search-holder" placeholder="Search for products, brands, and more" />
+<button id="srch" class="btn_srch">
+<i class="fa-solid fa-magnifying-glass fa-lg" style="color: #2874f0"></i
+><span class="glasss"></span>
+</button>
+</div>
+<div id="Login-box">
+<div id="login">
+     <a href="#Login.html">Login</a>
+</div>
+</div>
+<div id="seller-box">
+<div id="seller">
+    <a href="#seller.html">Become a seller</a>
+</div>
+</div>
+<div id="more-box">
+<div id="more">
+    <a href="#">More 
+        <i id="down" class="fa-solid fa-chevron-down fa-2xs"></i>
+        <i id="up" class="fa-sharp fa-solid fa-chevron-up fa-2xs" style="display: none;"></i>
+        
+        <i class="fa-solid fa-caret-up fa-2xl" id="more-arrow" style="display: none;"></i>
+        <div id="more-show" style="display: none;">
+            <div><p><i id="more-i"class="fa-solid fa-bell" style="color: #2874f0"></i> Notification Prefrences</p></div>
+            <div><p ><i id="more-i" class="fa-solid fa-clipboard-question" style="color: #2874f0"></i> 24*7 Customer Care</p></div>
+            <div><p ><i id="more-i" class="fa-solid fa-chart-line" style="color: #2874f0"></i> Advertise</p></div>
+            <div><p ><i id="more-i" class="fa-solid fa-download" style="color: #2874f0"></i> Download App</p></div>
+        </div>
+    </a>
+</div>
+</div>
+<div id="cart-box">
+<div id="cart" >
+    <a href="../Cart-Page/CartPage.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+</div>
+</div>
+</div>`;
+happend.innerHTML+=aaaa;
+
+    function toggle() {
+      const down = document.getElementById("down");
+      const up = document.getElementById("up");
+      const moreShow=document.getElementById("more-show");
+      const moreArrow=document.getElementById("more-arrow");
+      if (down.style.display === "none") {
+        down.style.display = "inline";
+        up.style.display = "none";
+        moreShow.style.display = "none";
+        moreArrow.style.display = "none";
+      } else {
+        down.style.display = "none";
+        up.style.display = "inline";
+        moreShow.style.display = "block";
+        moreArrow.style.display = "inline";
+      }
+
+    }
+    
+    const more = document.getElementById("more");
+    more.addEventListener("mouseenter", toggle);
+    more.addEventListener("mouseleave", toggle);
+
+
+    const loggedIn= JSON.parse(localStorage.getItem("loggedIn"))||false;
+    
+    function logging(name){
+        if (loggedIn==true)
+    {
+        var logInBox = document.getElementById("Login-box");
+        logInBox.innerHTML = "";
+        let x=`<div id="login" style="background-color: #2874f0;color:#fff;padding: 6px 10px;">
+                <a id="n-userName" href="#"  style="color:#fff";>${name}
+                    <i id="down1" class="fa-solid fa-chevron-down fa-2xs"></i>
+                    <i id="up1" class="fa-sharp fa-solid fa-chevron-up fa-2xs" style="display: none;"></i>
+                    
+                    <i class="fa-solid fa-caret-up fa-2xl" id="more-arrow1" style="display: none;"></i>
+                    <div id="more-show1" style="display: none;">
+                        <div><p><i id="more-i" class="fa-solid fa-user" style="color: #2874f0"></i> My Profile</p></div>
+                        <div><p><i id="more-i" class="fa-solid fa-coins" style="color: #2874f0"></i> SuperCoin Zone</p></div>
+                        <div><p><i id="more-i" class="fa-solid fa-plus fa-xl" style="color: #2874f0"></i> FlipkartPlus Zone</p></div>
+                        <div><p><i id="more-i" class="fa-solid fa-book-bookmark" style="color: #2874f0"></i> Orders</p></div>
+                        <div><p><i id="more-i" class="fa-solid fa-heart" style="color: #2874f0"></i> Wishlist</p></div>
+                        <div><p><i id="more-i" class="fa-solid fa-receipt" style="color: #2874f0"></i> Coupons</p></div>
+                        <div><p><i id="more-i" class="fa-solid fa-gift" style="color: #2874f0"></i> Gift Cards</p></div>
+                        <div><p><i id="more-i" class="fa-solid fa-bell" style="color: #2874f0"></i> Notifications</p></div>
+                        <div><p><i id="more-i" class="fa-solid fa-right-from-bracket" style="color: #2874f0"></i> Logout</p></div>
+                    </div>
+                </a>
+            </div>`;
+        logInBox.innerHTML +=x;
+        const nLogIn = document.getElementById("login");
+        nLogIn.addEventListener("mouseenter", userToggle);
+        nLogIn.addEventListener("mouseleave", userToggle);
+        function userToggle(){
+            const down = document.getElementById("down1");
+            const up = document.getElementById("up1");
+            const moreShow = document.getElementById("more-show1");
+            const moreArrow = document.getElementById("more-arrow1");
+            if (down.style.display === "none") {
+                down.style.display = "inline";
+                up.style.display = "none";
+                moreShow.style.display = "none";
+                moreArrow.style.display = "none";
+            } else {
+                down.style.display = "none";
+                up.style.display = "inline";
+                moreShow.style.display = "block";
+                moreArrow.style.display = "inline";
+            }
+        }
+    }
+    }

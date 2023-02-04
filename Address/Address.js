@@ -106,7 +106,7 @@ function addressDisplay(){
             </div>
           </div>
           <div id="cart-b1-b2">
-            <button id="addadr">Add Address</button>
+            <button id="addadr" onClick="addadr()">Add Address</button>
           </div>
         </div>`;
       addressDiv.innerHTML +=x;
@@ -186,9 +186,9 @@ cvvInput.addEventListener("keyup", function (){
 
 
 })
-var cdx=false;
-if(cdx===false){
-  document.getElementById("addadr").addEventListener("click",function(){
+
+function addadr()
+{
     console.log("gg")
     var username=document.getElementById("usern").value
     var mobile=document.getElementById("mobilen").value
@@ -212,8 +212,7 @@ if(cdx===false){
     cdx=true;
     addressDisplay()
   
-  })
-}
+  }
 
 
   function displaypay()
@@ -250,3 +249,9 @@ if(cdx===false){
  document.getElementById("c2-dis-price").textContent=itemsDisPrice;
     document.getElementById("c2-tot-price").textContent=itemsPayPrice;
   document.getElementById("c2-save").textContent =  itemsSavePrice;
+
+  function redirect()
+  {
+    alert("Order Successfully Placed")
+    location.href="/index.html"
+  }

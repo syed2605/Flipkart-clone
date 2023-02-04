@@ -332,7 +332,7 @@ function displaydata(cartArr) {
         };
         xx.push(x);
         localStorage.setItem("orderPrice",JSON.stringify(xx));
-        location.href = "address.html";
+        location.href = "../Address/Address.html";
     });
     });
     document.getElementById("c2-price").textContent = "₹"+c2DisPrice.toLocaleString();
@@ -651,6 +651,7 @@ happend.innerHTML+=aaaa;
                 up.style.display = "inline";
                 moreShow.style.display = "block";
                 moreArrow.style.display = "inline";
+                moreShow.style.zIndex="10";
             }
         }
     }

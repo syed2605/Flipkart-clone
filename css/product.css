@@ -18,6 +18,7 @@ body {
 #container {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   width: 82%;
+  margin-bottom: 20px;
 }
 #collection {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -50,7 +51,7 @@ body {
 }
 #collection .img_div img {
   width: 80%;
-  height: 400px;
+  height: 245px;
   cursor: pointer;
 }
 
@@ -270,7 +271,4 @@ li {
   left: 4px;
   bottom: -22px;
   font-size: 2.3rem;
-}
-.card{
-  height: 600px;
 }

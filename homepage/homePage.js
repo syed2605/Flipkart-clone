@@ -1938,7 +1938,11 @@ happend.innerHTML+=aaaa;
 
 
     const loggedIn= JSON.parse(localStorage.getItem("loggedIn"))||false;
-    
+    if (loggedIn==true) {
+var arr=JSON.parse(localStorage.getItem("logininfo"))||[];
+var xxl=arr[0].name;
+logging(xxl);
+    }
     function logging(name){
         if (loggedIn==true)
     {
@@ -1959,7 +1963,7 @@ happend.innerHTML+=aaaa;
                         <div><p><i id="more-i" class="fa-solid fa-receipt" style="color: #2874f0"></i> Coupons</p></div>
                         <div><p><i id="more-i" class="fa-solid fa-gift" style="color: #2874f0"></i> Gift Cards</p></div>
                         <div><p><i id="more-i" class="fa-solid fa-bell" style="color: #2874f0"></i> Notifications</p></div>
-                        <div><p><i id="more-i" class="fa-solid fa-right-from-bracket" style="color: #2874f0"></i> Logout</p></div>
+                        <div><p><i id="more-i" onClick="logout()" class="fa-solid fa-right-from-bracket" style="color: #2874f0"></i> Logout</p></div>
                     </div>
                 </a>
             </div>`;
@@ -1982,6 +1986,7 @@ happend.innerHTML+=aaaa;
                 up.style.display = "inline";
                 moreShow.style.display = "block";
                 moreArrow.style.display = "inline";
+                moreShow.style.zIndex="10";
             }
         }
     }
@@ -2125,6 +2130,8 @@ function check()
             logging(elem.name);
             var modal = document.getElementById("myModal");
             modal.style.display="none";
+            window.location.reload()
+      
             // window.location.href = "index.html";
         }
         else
@@ -2132,5 +2139,13 @@ function check()
             alert("wrong credentials")
         }
     })
+
+}
+function logout()
+{
+  console.log("logoutt");
+  const loggedIn= JSON.parse(localStorage.getItem("loggedIn"))||false;
+  localStorage.setItem("loggedIn",false);
+  window.location.reload() 
 
 }

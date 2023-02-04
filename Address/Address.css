@@ -33,9 +33,10 @@ body
 #parent
 {
     display: flex;
-    width: 60%;
+    width: 80%;
     margin: auto;
     margin-top: 20px;
+    gap: 20px;
 }
 #all
 {
