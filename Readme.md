@@ -68,7 +68,7 @@ Flipkart Private Limited is an Indian e-commerce company, headquartered in Benga
 Clone down this repository using this <a href="https://github.com/maharshdhasmana/Flipkart-clone">link</a>
 <hr/>
 ## See Live
-Visit the Deployed version using this <a href="">link</a>
+Visit the Deployed version using this <a href="https://64257deb9ebe4d009964b37a--taupe-creponne-37abf5.netlify.app/">link</a>
 <hr/>
 ## Team Members and Contributors
 ### Rutu
