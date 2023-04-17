@@ -20,73 +20,39 @@ To create this clone following Tech stack is used by contributors.
 - **Chat GPT**
 - **API**
 
-# **Project Status**
 
-FLIPKART-CLONE is now complete and fully functional. The team has successfully implemented all of the necessary features and functionality of the website.
 
 ## **About Flipkart**
 
 Flipkart Private Limited is an Indian e-commerce company, headquartered in Bengaluru, and incorporated in Singapore as a private limited company.The company’s retail product categories include electronics, footwear, clothing, watches, accessories, bags, belts and wallets, fragrances, perfumes, grooming and wellness products, beauty, personal care products and jewelry. It also provides sunglasses, toys, baby care products, home products and furniture, books and media products, fitness products, stationery, and auto and sports goods, among others. Flipkart’s services offerings include shipping, order cancellation, return, refund, and payment services.
 
-<hr/>
-## Sneak Peak
-#### **Landing Page:**
-<img src=""/>
-<br>
-#### **Responsive Landing Page:**
-<img src=""/>
-<br>
-#### Signup Page:
-<img src=""/>
-<br>
-#### Login Page:
-<img src=""/>
-<br>
-#### Getting otp by email Page:
-<img src=""/>
-<br>
-#### Product Page:
-<img src=""/>
-<br>
-#### Wishlist Function Page:
-<img src=""/>
-<br>
-#### Cart Function Page:
-<img src=""/>
-<br>
-####  Address Page:
-<img src=""/>
-<br>
-#### Payment Page:
-<img src=""/>
-<br>
-#### Bill invoice Page:
-<img src=""/>
-<br>
-<hr/>
+
 ## Installation and Setup Instructions
-Clone down this repository using this <a href="https://github.com/maharshdhasmana/Flipkart-clone">link</a>
+Clone down this repository using this <a href="https://github.com/syed2605/Flipkart-clone">link</a>
 <hr/>
 ## See Live
 Visit the Deployed version using this <a href="https://64257deb9ebe4d009964b37a--taupe-creponne-37abf5.netlify.app/">link</a>
 <hr/>
+
 ## Team Members and Contributors
 ### Rutu
 - **Github** : Rutu-11
 - **Github Link** : https://github.com/Rutu-11
-- **Linkedin** :
+
 ### Ch. Krishna
 - **Github** : chkrishna142
 - **Github Link** : https://github.com/chkrishna142
-- **Linkedin** :
+
 ### Maharsh Dhasmana
 - **Github** : maharshdhasmana
 - **Github Link** :https://github.com/maharshdhasmana
 - **Linkedin** : https://www.linkedin.com/in/maharsh-dhasmana-373166199/
+
 ### Mohammad Gouse Syed
 - **Github** : syed2605
 - **Github Link** : https://github.com/syed2605
 - **Linkedin** : https://www.linkedin.com/in/mohammad-gouse-syed-9751a5160/
+
 ### Rasika Gujar
 - **Github** : rasikaG23
 - **Github Link** : https://github.com/rasikaG23
